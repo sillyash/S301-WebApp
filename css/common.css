@@ -1,0 +1,14 @@
+@charset "utf8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import './header.css';
+@import './footer.css';
+
+* {
+    font-family: "Noto Sans", serif;
+    font-size: 1rem;  /* 16px */
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
