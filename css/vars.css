@@ -1,7 +1,9 @@
 :root {
     --main-max-width: 1000px;
+    --main-padding: 6px;    
+
     --header-height: 80px;
-    --footer-height: 100px;
+    --footer-height: 115px;
 
     /* normaliser noir / blanc pour modifier ici */
     --white: #ffffff;
@@ -16,6 +18,10 @@
     --color6: #ff6f61ff; /* coral or orange-red */
     
     /* alias couleurs pour css verbeux */
+    --main-background-color: var(--white);
+    --background-color-light: var(--color1);
+    --background-color-dark: var(--color3);
+
     --text-color-light: var(--white);
     --text-color-dark: var(--black);
 

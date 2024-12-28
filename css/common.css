@@ -1,9 +1,9 @@
 @charset "utf8";
 
-/* Noto Sans Font */ 
+/* Noto Sans Font */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Other CSS golbal rules */
+/* Other CSS global rules */
 @import './vars.css';
 @import './header.css';
 @import './footer.css';
@@ -18,6 +18,22 @@
     color: var(--black);
 }
 
+html {
+    scroll-behavior: smooth;
+
+    /* sticky header */
+    scroll-padding-top: calc(var(--header-height) + 2 * var(--main-padding) + 10px);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -25,5 +41,9 @@ main {
     justify-items: center;
     align-content: center;
     align-items: center;
+    
     max-width: var(--main-max-width);
+    width: 100%;
+    
+    background-color: var(--main-background-color);
 }
