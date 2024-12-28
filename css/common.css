@@ -1,6 +1,10 @@
 @charset "utf8";
 
+/* Noto Sans Font */ 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Other CSS golbal rules */
+@import './vars.css';
 @import './header.css';
 @import './footer.css';
 
@@ -11,4 +15,15 @@
     font-weight: normal;
     font-style: normal;
     font-variation-settings: "wdth" 100;
+    color: var(--black);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    max-width: var(--main-max-width);
 }
