@@ -14,8 +14,7 @@
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
-    font-variation-settings: "wdth" 100;
-    color: var(--black);
+    color: var(--white);
 }
 
 html {
@@ -32,6 +31,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-color: var(--main-background-color);
 }
 
 main {
@@ -44,6 +44,4 @@ main {
     
     max-width: var(--main-max-width);
     width: 100%;
-    
-    background-color: var(--main-background-color);
 }
