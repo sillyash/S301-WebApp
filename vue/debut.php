@@ -7,7 +7,5 @@
 	<link rel="icon" type="image/x-icon" href="assets/favicon.svg"/>
 </head>
 <body>
-    <header>
-        <?php include_once(VUE . "/header.html"); ?>
-    </header>
+    <?php include_once(VUE . "/header.html"); ?>
     <main>
