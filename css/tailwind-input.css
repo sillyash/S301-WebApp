@@ -1,4 +1,10 @@
-:root {
+@charset "UTF-8";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
     --main-max-width: 1000px;
     --main-padding: 6px;    
 
