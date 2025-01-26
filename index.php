@@ -3,7 +3,7 @@
 define("WORKDIR", __DIR__);
 require_once(WORKDIR . '/config/params.php');
 
-include_once(VUE . "/debut.php");
+include_once(VUE . "/debut.html");
 
 echo "<ul>";
 echo "<li>Workdir : " . WORKDIR . "</li>";
@@ -15,10 +15,6 @@ echo "<li>CSS : " .     CSS . "</li>";
 echo "<li>Assets : " .  ASSETS . "</li>";
 echo "</ul>";
 
-//echo "Test de la connexion à la BDD";
-//require_once(CONFIG . "/connexion.php");
-//Connexion::connect();
-
-include_once(VUE . "/fin.php");
+include_once(VUE . "/fin.html");
 
 ?>
