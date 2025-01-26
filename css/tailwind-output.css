@@ -616,6 +616,9 @@
   .resize {
     resize: both;
   }
+  .flex-col {
+    flex-direction: column;
+  }
   .items-center {
     align-items: center;
   }
@@ -647,6 +650,10 @@
   .text-lg {
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
   }
   .text-white {
     color: var(--color-white);
