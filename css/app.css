@@ -1,0 +1,107 @@
+@charset "utf8";
+
+/* Noto Sans Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Tailwind */
+@import './tailwind-output.css';
+
+html {
+    scroll-behavior: smooth;
+
+    /* sticky header */
+    scroll-padding-top: calc(var(--header-height) + 2 * var(--main-padding) + 10px);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--color-bg-main);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    
+    max-width: var(--main-max-width);
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    height: var(--footer-height);
+    width: 100%;
+
+    background-color: var(--background-color-dark);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: var(--header-height);
+    width: 100%;
+
+    background-color: var(--white);
+
+    justify-content: center;
+    align-items: center;
+}
+
+#navlogo {
+    height: var(--header-height);
+    width: var(--header-height);
+} 
+
+#navlogo > img {
+    display: block;
+
+    --padding-navlogo: 8px;
+    height: calc(100% - var(--padding-navlogo) * 2);
+    width: calc(100% - var(--padding-navlogo) * 2);
+    padding: var(--padding-navlogo);
+}
+
+#header-nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navlink {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: var(--color-blue-500);
+}
+
+.navlink:nth-child(1) {
+    color: var(--color-red-500);
+}
+
+.navlink:hover {
+    color: var(--color-grey-400);
+    transition: 0.4s all ease-in-out;
+}
+
