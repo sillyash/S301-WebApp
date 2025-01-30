@@ -1,26 +1,31 @@
 <div style="display: flex; justify-content: space-between; align-items: center;">
     <img src="assets/favicon.svg" alt="logo" style="width: 300px; height: auto;">
     
-    <form method="post" class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full p-4 bg-white shadow-md rounded">
+    <form method="post" class="flex flex-col w-full">
 
         <a href= "./?create=true">
-            <button type="button" class="col-span-3 bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">Créer un Compte!</button>
+            <button class="bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600" type="button">
+                Créer un Compte!
+            </button>
         </a>
-        <div></div>
 
-        <label for="login" class="justify-self-start">Login:</label>
-        <input type="text" name="login" required>
-        <div></div>
+        <div class="flex flex-row">
+            <label class="flex-1 text-right" for="login">Login:</label>
+            <input class="flex-1 bg-blue-500 rounded-md text-white" type="text" name="login" required>
+        </div>
 
-        <label for="password" class="justify-self-start">Mot de passe:</label>
-        <input type="password" name="password" required>
-        <div></div>
+        <div class="flex flex-row">
+            <label class="flex-1 text-right" for="password">Mot de passe:</label>
+            <input class="flex-1 bg-blue-500 rounded-md text-white" type="password" name="password" required>
+        </div>
 
-        <button id="buttonArrow" type="submit" class="bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">➜</button>
+        <button class="bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600" id="buttonArrow" type="submit">
+            ➜
+        </button>
     </form>
 
     <div>
-        (description osef)<br>
-        DemoCité c'est trop bien on adore la démocratie c'est super.
+        <p>(description osef)</p>
+        <p>DemoCité c'est trop bien on adore la démocratie c'est super.</p>
     </div>
 </div>
