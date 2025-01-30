@@ -2,8 +2,10 @@
 require_once 'Modele.php';
 
 class Role extends Modele {
-    private static $cle = 'idRole';
-    private static $table = 'Role';
+    protected static string $table = 'Role';
+    protected static array $cle = [];
+    protected static array $requiredAttributes = [];
+    protected static array $optionalAttributes = [];
 }
 
 ?>

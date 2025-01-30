@@ -2,8 +2,10 @@
 require_once 'Modele.php';
 
 class Signalement extends Modele {
-    private static $cle = 'idSignalement';
-    private static $table = 'Signalement';
+    protected static string $table = 'Signalement';
+    protected static array $cle = [];
+    protected static array $requiredAttributes = [];
+    protected static array $optionalAttributes = [];
 }
 
 ?>

@@ -2,8 +2,10 @@
 require_once 'Modele.php';
 
 class Reaction extends Modele {
-    private static $cle = 'idReaction';
-    private static $table = 'Reaction';
+    protected static string $table = 'Reaction';
+    protected static array $cle = [];
+    protected static array $requiredAttributes = [];
+    protected static array $optionalAttributes = [];
 }
 
 ?>
