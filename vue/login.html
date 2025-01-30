@@ -4,7 +4,7 @@
     <form method="post" class="flex flex-col mx-8 my-4 w-200">
 
         <a href= "./?create=true">
-            <button class="w-full text-center bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600" type="button">
+            <button class="w-full text-center bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 p-4" type="button">
                 Créer un Compte!
             </button>
         </a>
@@ -19,13 +19,17 @@
             <input class="flex-1 bg-blue-500 rounded-md text-white" type="password" name="password" required>
         </div>
 
-        <button class="bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 rounded-xl" type="submit">
-            ➜
-        </button>
+        <!-- Add check with DB for valid login credentials -->
 
+        <a href= "./?home=true">
+            <button class="bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 rounded-xl" type="submit">
+                ➜
+            </button>
+        </a>
         <div class="flex-1 inline text-center align-middle bg-gray-500 rounded-md text-white mt-4">
-            <p>(description osef)</p>
-            <p>DemoCité c'est trop bien on adore la démocratie c'est super.</p>
+            <p><strong>DemoCité : la démocratie participative pour tous.</strong></p>
+            <p>À vos marques, prêts, votez ! Notre application vous permet d’établir des votes entre membres d’un même groupe. Association, petite ou grande, entreprise ou simple collectif, nous vous accueillons avec enthousiasme!</p>
+            <p>Exprimez vos idées, prenez part aux décisions et facilitez la gestion démocratique de votre organisation grâce à notre plateforme intuitive et accessible à tous.</p>
         </div>
     </form>
 
