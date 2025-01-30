@@ -7,6 +7,7 @@ $homePage = isset($_GET["home"]) ? true : false;
 if ($createAccount){
     include(VUE . "/createAccount.html");
 } else if ($homePage){
+    $_SESSION["logged"] = "true";
     include(VUE . "/accueil.html");
 } else {
     include(VUE . "/login.html");
