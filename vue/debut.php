@@ -7,7 +7,7 @@
 	<link rel="icon" type="image/x-icon" href="assets/favicon.svg" />
 </head>
 <body>
-	<header class="flex align-center bg-grey-300 shadow-md h-(--height-header)">
+	<header class="flex align-center bg-white shadow-md h-(--height-header)">
 		<a class="flex justify-center items-center size-(--height-header)" href="index.php">
 			<img class="block size-[calc(var(--height-header)_-_20px)] mx-auto" src="assets/favicon.svg" alt="logo"/>
 		</a>
@@ -19,4 +19,4 @@
 		}
 		?>
 	</header>
-	<main class="flex flex-col min-h-[calc(100vh_-_var(--height-header)_-_var(--height-footer))] w-full p-12 bg-grey-200 justify-center items-center">
+	<main class="flex flex-col min-h-[calc(100vh_-_var(--height-header)_-_var(--height-footer))] w-full p-12 bg-gray-200 justify-center items-center">
