@@ -717,8 +717,14 @@
   .bg-grey-400 {
     background-color: var(--color-grey-400);
   }
+  .bg-grey-500 {
+    background-color: var(--color-grey-500);
+  }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
   }
   .p-12 {
     padding: calc(var(--spacing) * 12);
