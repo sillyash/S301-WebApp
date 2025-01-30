@@ -533,12 +533,6 @@
   }
 }
 @layer utilities {
-  .collapse {
-    visibility: collapse;
-  }
-  .relative {
-    position: relative;
-  }
   .static {
     position: static;
   }
@@ -551,17 +545,11 @@
   .mx-6 {
     margin-inline: calc(var(--spacing) * 6);
   }
-  .mx-8 {
-    margin-inline: calc(var(--spacing) * 8);
-  }
   .mx-auto {
     margin-inline: auto;
   }
   .my-4 {
     margin-block: calc(var(--spacing) * 4);
-  }
-  .my-8 {
-    margin-block: calc(var(--spacing) * 8);
   }
   .block {
     display: block;
@@ -569,17 +557,8 @@
   .flex {
     display: flex;
   }
-  .grid {
-    display: grid;
-  }
   .inline {
     display: inline;
-  }
-  .inline-flex {
-    display: inline-flex;
-  }
-  .list-item {
-    display: list-item;
   }
   .table {
     display: table;
@@ -588,21 +567,9 @@
     width: var(--height-header);
     height: var(--height-header);
   }
-  .size-40 {
-    width: calc(var(--spacing) * 40);
-    height: calc(var(--spacing) * 40);
-  }
   .size-72 {
     width: calc(var(--spacing) * 72);
     height: calc(var(--spacing) * 72);
-  }
-  .size-400 {
-    width: calc(var(--spacing) * 400);
-    height: calc(var(--spacing) * 400);
-  }
-  .size-500 {
-    width: calc(var(--spacing) * 500);
-    height: calc(var(--spacing) * 500);
   }
   .size-\[calc\(var\(--height-header\)_-_20px\)\] {
     width: calc(var(--height-header) - 20px);
@@ -620,38 +587,11 @@
   .w-200 {
     width: calc(var(--spacing) * 200);
   }
-  .w-300 {
-    width: calc(var(--spacing) * 300);
-  }
-  .w-500 {
-    width: calc(var(--spacing) * 500);
-  }
   .w-full {
     width: 100%;
   }
   .flex-1 {
     flex: 1;
-  }
-  .flex-3 {
-    flex: 3;
-  }
-  .flex-auto {
-    flex: auto;
-  }
-  .flex-initial {
-    flex: 0 auto;
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .transform {
-    transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
-  }
-  .resize {
-    resize: both;
-  }
-  .grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -665,27 +605,11 @@
   .justify-center {
     justify-content: center;
   }
-  .gap-4 {
-    gap: calc(var(--spacing) * 4);
-  }
-  .justify-self-start {
-    justify-self: flex-start;
-  }
-  .rounded {
-    border-radius: 0.25rem;
-  }
   .rounded-md {
     border-radius: var(--radius-md);
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .bg-black {
     background-color: var(--color-black);
-  }
-  .bg-blue-300 {
-    background-color: var(--color-blue-300);
   }
   .bg-blue-500 {
     background-color: var(--color-blue-500);
@@ -705,9 +629,6 @@
   .bg-white {
     background-color: var(--color-white);
   }
-  .p-4 {
-    padding: calc(var(--spacing) * 4);
-  }
   .p-12 {
     padding: calc(var(--spacing) * 12);
   }
@@ -726,27 +647,15 @@
   .text-white {
     color: var(--color-white);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .shadow-md {
     --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .hover\:bg-blue-600 {
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-blue-600);
       }
-    }
-  }
-  .md\:grid-cols-3 {
-    @media (width >= 48rem) {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
 }
@@ -775,36 +684,6 @@
     transform: none;
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
-}
-@property --tw-rotate-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: rotateX(0);
-}
-@property --tw-rotate-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: rotateY(0);
-}
-@property --tw-rotate-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: rotateZ(0);
-}
-@property --tw-skew-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: skewX(0);
-}
-@property --tw-skew-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: skewY(0);
-}
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @property --tw-shadow {
   syntax: "*";
@@ -860,9 +739,4 @@
   syntax: "*";
   inherits: false;
   initial-value: 0 0 #0000;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
