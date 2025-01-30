@@ -545,8 +545,14 @@
   .col-span-3 {
     grid-column: span 3 / span 3;
   }
+  .mx-8 {
+    margin-inline: calc(var(--spacing) * 8);
+  }
   .mx-auto {
     margin-inline: auto;
+  }
+  .my-8 {
+    margin-block: calc(var(--spacing) * 8);
   }
   .block {
     display: block;
@@ -591,6 +597,12 @@
   }
   .flex-3 {
     flex: 3;
+  }
+  .flex-auto {
+    flex: auto;
+  }
+  .flex-initial {
+    flex: 0 auto;
   }
   .border-collapse {
     border-collapse: collapse;

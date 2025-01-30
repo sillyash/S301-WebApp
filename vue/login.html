@@ -1,21 +1,21 @@
-<div style="display: flex; justify-content: space-between; align-items: center;">
-    <img src="assets/favicon.svg" alt="logo" style="width: 300px; height: auto;">
+<div class="flex justify-space-between align-center">
+    <img class="flex-start" src="assets/favicon.svg" alt="logo" style="width: 300px; height: auto;">
     
     <form method="post" class="flex flex-col w-full">
 
         <a href= "./?create=true">
-            <button class="bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600" type="button">
+            <button class="w-full text-center bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600" type="button">
                 Créer un Compte!
             </button>
         </a>
 
-        <div class="flex flex-row">
-            <label class="flex-1 text-right" for="login">Login:</label>
+        <div class="flex flex-row my-8">
+            <label class="flex-1 text-right mx-8" for="login">Login:</label>
             <input class="flex-1 bg-blue-500 rounded-md text-white" type="text" name="login" required>
         </div>
 
-        <div class="flex flex-row">
-            <label class="flex-1 text-right" for="password">Mot de passe:</label>
+        <div class="flex flex-row my-8">
+            <label class="flex-1 text-right mx-8" for="password">Mot de passe:</label>
             <input class="flex-1 bg-blue-500 rounded-md text-white" type="password" name="password" required>
         </div>
 

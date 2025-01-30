@@ -19,4 +19,4 @@
 		}
 		?>
 	</header>
-	<main class="flex flex-col min-h-[calc(100vh_-_var(--height-header)_-_var(--height-footer))] w-full p-12 bg-grey-400 justify-center items-center">
+	<main class="flex flex-col min-h-[calc(100vh_-_var(--height-header)_-_var(--height-footer))] w-full p-12 bg-grey-200 justify-center items-center">
