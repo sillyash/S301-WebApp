@@ -592,6 +592,10 @@
     width: calc(var(--spacing) * 40);
     height: calc(var(--spacing) * 40);
   }
+  .size-72 {
+    width: calc(var(--spacing) * 72);
+    height: calc(var(--spacing) * 72);
+  }
   .size-400 {
     width: calc(var(--spacing) * 400);
     height: calc(var(--spacing) * 400);
@@ -612,6 +616,9 @@
   }
   .min-h-\[calc\(100vh_-_var\(--height-header\)_-_var\(--height-footer\)\)\] {
     min-height: calc(100vh - var(--height-header) - var(--height-footer));
+  }
+  .w-200 {
+    width: calc(var(--spacing) * 200);
   }
   .w-300 {
     width: calc(var(--spacing) * 300);
