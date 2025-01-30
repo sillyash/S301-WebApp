@@ -1,5 +1,17 @@
 <?php
+// development flag
+if (!defined('DEV')) define('DEV', true);
 
+// error reporting
+if (DEV) {
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+} else {
+    error_reporting(E_ERROR);
+    ini_set('display_errors', 0);
+}
+
+define("WORKDIR",   realpath(__DIR__ . "/../"));
 define("CONFIG",    realpath(WORKDIR . "/config"));
 define("VUE",       realpath(WORKDIR . "/vue"));
 define("MODELE",    realpath(WORKDIR . "/modele"));

@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 	<meta charset="utf-8">
-	<title>DemocHub / DemoCité</title>
+	<title>DemoCité</title>
 	<link rel="stylesheet" href="css/app.css" />
 	<link rel="icon" type="image/x-icon" href="assets/favicon.svg" />
 </head>
@@ -11,13 +11,12 @@
 		<a class="flex justify-center items-center size-(--height-header)" href="index.php">
 			<img class="block size-[calc(var(--height-header)_-_20px)] mx-auto" src="assets/favicon.svg" alt="logo"/>
 		</a>
-	
-		<div class="flex justify-around align-center items-center text-center w-full">
-			<a class="flex-1 text-lg" href="index.php">Accueil</a>
-			<a class="flex-1 text-lg" href="index.php">Truc</a>
-			<a class="flex-1 text-lg" href="index.php">Truc</a>
-			<a class="flex-1 text-lg" href="index.php">Truc</a>
-		</div>
+		<?php
+		if ($_SESSION["logged"] == "false"){
+			include(VUE . "/headerLanding.html");
+		} else {
+			include(VUE . "/header.html");
+		}
+		?>
 	</header>
-
 	<main class="flex flex-col min-h-[calc(100vh_-_var(--height-header)_-_var(--height-footer))] w-full p-12 bg-grey-400 justify-center items-center">
