@@ -644,6 +644,9 @@
   .flex-1 {
     flex: 1;
   }
+  .cursor-pointer {
+    cursor: pointer;
+  }
   .appearance-none {
     appearance: none;
   }
