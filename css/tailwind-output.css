@@ -572,9 +572,6 @@
   .my-4 {
     margin-block: calc(var(--spacing) * 4);
   }
-  .my-10 {
-    margin-block: calc(var(--spacing) * 10);
-  }
   .mt-1 {
     margin-top: calc(var(--spacing) * 1);
   }
@@ -629,6 +626,9 @@
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
+  .h-40 {
+    height: calc(var(--spacing) * 40);
+  }
   .min-h-\[calc\(100vh_-_var\(--height-header\)_-_var\(--height-footer\)\)\] {
     min-height: calc(100vh - var(--height-header) - var(--height-footer));
   }
@@ -637,9 +637,6 @@
   }
   .w-200 {
     width: calc(var(--spacing) * 200);
-  }
-  .w-\[50\%\] {
-    width: 50%;
   }
   .w-full {
     width: 100%;
