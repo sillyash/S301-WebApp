@@ -1,32 +1,38 @@
-<form class="flex flex-col justify-space-between align-center" method="post">
+<form class="flex flex-col justify-space-between align-center w-200" method="post">
+    <a href= "./">
+        <button class="w-full text-center bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 p-4" type="button">
+            Se connecter
+        </button>
+    </a>
+
     <div class="flex w-full justify-center align-center my-10">
         <label class="flex-1 w-[50%] text-right mx-8" for="login">Login:</label>
-        <input class="border border-gray-500 focus:ring-blue-500 focus:border-blue-500 rounded-sm" type="text" name="login" required>
+        <input class="flex-1 bg-blue-500 rounded-md text-white" type="text" name="login" required>
     </div>
 
     <div class="flex w-full justify-center align-center my-10">
         <label for="lName">Nom</label>
-        <input class="border border-gray-500 focus:ring-blue-500 focus:border-blue-500 rounded-sm" type="text" name="lName" required>
+        <input class="flex-1 bg-blue-500 rounded-md text-white" type="text" name="lName" required>
     </div>
        
     <div class="flex w-full justify-center align-center my-10">
         <label for="password">Mot de passe</label>
-        <input class="border border-gray-500 focus:ring-blue-500 focus:border-blue-500 rounded-sm" type="password" name="password" required>
+        <input class="flex-1 bg-blue-500 rounded-md text-white" type="password" name="password" required>
     </div>
     
     <div class="flex w-full justify-center align-center my-10">
         <label for="fName">Prénom</label>
-        <input class="border border-gray-500 focus:ring-blue-500 focus:border-blue-500 rounded-sm" type="text" name="fName" required>
+        <input class="flex-1 bg-blue-500 rounded-md text-white" type="text" name="fName" required>
     </div>
     
     <div class="flex w-full justify-center align-center my-10">
         <label for="email">Adresse Mail</label>
-        <input class="border border-gray-500 focus:ring-blue-500 focus:border-blue-500 rounded-sm" type="text" name="email" required>
+        <input class="flex-1 bg-blue-500 rounded-md text-white" type="text" name="email" required>
     </div>
     
     <div class="flex w-full justify-center align-center my-10">
         <label for="adr">Adresse Postale</label>
-        <input class="border border-gray-500 focus:ring-blue-500 focus:border-blue-500 rounded-sm" type="text" name="adr" required>
+        <input class="flex-1 bg-blue-500 rounded-md text-white" type="text" name="adr" required>
     </div>
 
     <!-- TODO: controller add checks for valid input for each field -->
