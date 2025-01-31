@@ -81,6 +81,50 @@ abstract class Modele extends stdClass {
         */
     }
 
+    public function postToApi() : bool {
+        $data_json = json_encode($this);
+
+        try {
+            $handle = curl_init();
+            curl_setopt($handle, CURLOPT_URL, API_URL . $this::$table);
+            curl_setopt($handle, CURLOPT_HTTPHEADER, array('Content-Type: application/json','Content-Length: ' . strlen($data_json)));
+            curl_setopt($handle, CURLOPT_POST, 1);
+            curl_setopt($handle, CURLOPT_POSTFIELDS, $data_json);
+            curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
+        } catch (Exception $e) {
+            echo "Error: " . $e->getMessage();
+        }
+        $response = $this->curlExec($handle);
+        if (!$response) {
+            echo "<pre>" . htmlspecialchars($response) . "</pre>";
+            return false;
+        }
+        return true;
+    }
+
+    public static function curlExec(CurlHandle $handle) : string|false {
+        try {
+            $response = curl_exec($handle);
+
+            if (!$response) {
+                throw new Exception("Error executing POST request");
+                exit();
+            }
+
+            $httpCode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
+
+            if ($httpCode > 299 || $httpCode < 200) {
+                echo "<pre>" . htmlspecialchars($response) . "</pre>";
+                throw new Exception("Error creating account: API returned HTTP code $httpCode.");
+                exit();
+            }
+        } catch (Exception $e) {
+            echo "Error: " . $e->getMessage();
+            return false;
+        }
+        return $response;
+    }
+
     public static function getCle() { return static::$cle; }
     public static function getTable() { return static::$table; }
     public function get(string $attr) { return $this->$attr; }
