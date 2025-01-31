@@ -19,4 +19,7 @@ define("CONTROLEUR",realpath(WORKDIR . "/controleur"));
 define("CSS",       realpath(WORKDIR . "/css"));
 define("ASSETS",    realpath(WORKDIR . "/assets"));
 
+define("API_URL", "https://projets.iut-orsay.fr/prj-mmorich/S301-API/");
+define("HASH_ALGO", "sha256");
+
 ?>
