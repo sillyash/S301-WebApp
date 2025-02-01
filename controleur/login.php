@@ -9,7 +9,6 @@ if ($createAccount){
 } else if ($homePage){
     $_SESSION["logged"] = "true";
     include(CONTROLEUR . "/navigation.php");
-    include(VUE . "/accueil.html");
 } else {
     include(VUE . "/login.html");
 }
