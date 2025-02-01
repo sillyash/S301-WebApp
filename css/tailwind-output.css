@@ -536,6 +536,12 @@
   .static {
     position: static;
   }
+  .sticky {
+    position: sticky;
+  }
+  .top-\(--height-header\) {
+    top: var(--height-header);
+  }
   .mx-5 {
     margin-inline: calc(var(--spacing) * 5);
   }
@@ -634,12 +640,6 @@
   }
   .bg-grey-300 {
     background-color: var(--color-grey-300);
-  }
-  .bg-grey-400 {
-    background-color: var(--color-grey-400);
-  }
-  .bg-grey-500 {
-    background-color: var(--color-grey-500);
   }
   .bg-white {
     background-color: var(--color-white);
