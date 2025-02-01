@@ -8,7 +8,7 @@ if ($_SESSION["logged"] == "true") {
         include(CONTROLEUR . "/navigation.php");
     }
 } else {
-    include(CONTROLEUR . "/login.php");
+    include(VUE . "/?home=true");
 }
 
 include(VUE . "/fin.html");
