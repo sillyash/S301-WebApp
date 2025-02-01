@@ -1,5 +1,5 @@
 <?php session_start();
-$_SESSION["logged"] = "false"; ?>
+$_SESSION["logged"] = "true"; ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
