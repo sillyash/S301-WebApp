@@ -9,7 +9,7 @@ if ($propos){
     include(VUE . "/mesPropos.html");
 } else if ($account){
     include(VUE . "/monCompte.html");
-} else if ($home){
+} else if ($homePage){
     include(VUE . "/accueil.html");
 } else {
     include(VUE . "/login.html");
