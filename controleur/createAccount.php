@@ -28,9 +28,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $httpCode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
 
         if ($httpCode > 299 || $httpCode < 200) {
-            echo "<pre>" . htmlspecialchars($response) . "</pre>";
-            throw new Exception("Error creating account: API returned HTTP code $httpCode.");
-            exit();
+            //echo "<pre>" . htmlspecialchars($response) . "</pre>";
+            //throw new Exception("Error creating account: API returned HTTP code $httpCode.");
+            //exit();
+
+            $response = json_decode($response, true);
+            $sqlError = $response['error'];
+
+            if (Internaute::isSqlDuplicate($sqlError)) {
+                echo "<p>Error: login already exists<p>";
+            } else {
+                echo "<p>Error: $sqlError <p>";
+            }
         }
     } catch (Exception $e) {
         echo "Error: " . $e->getMessage();

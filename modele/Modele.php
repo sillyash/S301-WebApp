@@ -231,6 +231,10 @@ abstract class Modele extends stdClass {
         return $response;
     }
 
+    public static function isSqlDuplicate(string $error) : bool {
+        return strpos($error, "Duplicate entry") !== false;
+    }
+
     public static function getCle() { return static::$cle; }
     public static function getTable() { return static::$table; }
     public function get(string $attr) { return $this->$attr; }
