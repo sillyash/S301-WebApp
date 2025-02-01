@@ -12,5 +12,4 @@ if ($createAccount){
 } else {
     include(VUE . "/login.html");
 }
-// TODO fix the header thing - it doesn't work
 ?>

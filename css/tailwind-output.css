@@ -551,9 +551,6 @@
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
-  .col-span-3 {
-    grid-column: span 3 / span 3;
-  }
   .mx-5 {
     margin-inline: calc(var(--spacing) * 5);
   }
