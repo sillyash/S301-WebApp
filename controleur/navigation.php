@@ -1,7 +1,6 @@
 <?php
 require_once(__DIR__ . "/../config/params.php");
 
-$home = isset($_GET["home"]) ? true : false;
 $propos = isset($_GET["propos"]) ? true : false;
 $account = isset($_GET["account"]) ? true : false;
 
