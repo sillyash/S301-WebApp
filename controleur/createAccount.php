@@ -4,7 +4,7 @@ require_once(MODELE . "/Internaute.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
-        $internaute = new Internaute($_POST);
+        $internaute = new Internaute($_POST, CONSTRUCT_POST);
         $data_json = json_encode($internaute);
     } catch (Exception $e) {
         echo "Error: " . $e->getMessage();
