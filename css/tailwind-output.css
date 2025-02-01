@@ -665,9 +665,6 @@
   .rounded-none {
     border-radius: 0;
   }
-  .rounded-xl {
-    border-radius: var(--radius-xl);
-  }
   .rounded-l-md {
     border-top-left-radius: var(--radius-md);
     border-bottom-left-radius: var(--radius-md);
@@ -918,6 +915,7 @@ button {
   border-radius: 0.375rem;
   text-align: center;
   vertical-align: middle;
+  cursor: pointer;
 }
 button:hover {
   background-color: var(--color-blue-600);
