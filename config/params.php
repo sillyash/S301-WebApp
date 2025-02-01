@@ -18,6 +18,7 @@ define("MODELE",    realpath(WORKDIR . "/modele"));
 define("CONTROLEUR",realpath(WORKDIR . "/controleur"));
 define("CSS",       realpath(WORKDIR . "/css"));
 define("ASSETS",    realpath(WORKDIR . "/assets"));
+define("ROOT_URL",  "https://projets.iut-orsay.fr/prj-mmorich/S301-WebApp/");
 
 define("API_URL", "https://projets.iut-orsay.fr/prj-mmorich/S301-API/");
 define("HASH_ALGO", "sha256");
