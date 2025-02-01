@@ -10,7 +10,7 @@ if ($_SESSION["logged"] == "true") {
         include(VUE . "/accueil.html");
     }
 } else {
-    include(VUE . "/login.html");
+    include(CONTROLEUR . "/login.php");
 }
 
 include(VUE . "/fin.html");
