@@ -1,4 +1,5 @@
-<?php session_start(); ?>
+<?php session_start();
+$_SESSION["logged"] = "true"; ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>

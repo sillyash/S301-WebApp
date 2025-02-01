@@ -710,6 +710,9 @@ button {
 button:hover {
   background-color: var(--color-blue-600);
 }
+a:hover {
+  color: var(--color-orange-500);
+}
 .error {
   display: flex;
   justify-content: center;
