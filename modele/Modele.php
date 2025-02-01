@@ -81,13 +81,17 @@ abstract class Modele extends stdClass {
         */
     }
 
+    /**
+     * Posts the object to the API (and to the database).
+     * @return bool True if the object was successfully posted, false otherwise.
+     */
     public function postToApi() : bool {
         $data_json = json_encode($this);
 
         try {
             $handle = curl_init();
             curl_setopt($handle, CURLOPT_URL, API_URL . $this::$table);
-            curl_setopt($handle, CURLOPT_HTTPHEADER, array('Content-Type: application/json','Content-Length: ' . strlen($data_json)));
+            curl_setopt($handle, CURLOPT_HTTPHEADER,array('Content-Type: application/json','Content-Length: ' . strlen($data_json)));
             curl_setopt($handle, CURLOPT_POST, 1);
             curl_setopt($handle, CURLOPT_POSTFIELDS, $data_json);
             curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
@@ -102,6 +106,108 @@ abstract class Modele extends stdClass {
         return true;
     }
 
+    /**
+     * Puts the object to the API (and to the database).
+     * @return bool True if the object was successfully put, false otherwise.
+     */
+    public function putToApi() : bool {
+        $data_json = json_encode($this);
+
+        try {
+            $handle = curl_init();
+            curl_setopt($handle, CURLOPT_URL, API_URL . $this::$table);
+            curl_setopt($handle, CURLOPT_HTTPHEADER, array('Content-Type: application/json','Content-Length: ' . strlen($data_json)));
+            curl_setopt($handle, CURLOPT_CUSTOMREQUEST, "PUT");
+            curl_setopt($handle, CURLOPT_POSTFIELDS, $data_json);
+            curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
+        } catch (Exception $e) {
+            echo "Error: " . $e->getMessage();
+        }
+        $response = $this->curlExec($handle);
+        if (!$response) {
+            echo "<pre>" . htmlspecialchars($response) . "</pre>";
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * Deletes the object from the API (and from the database).
+     * @return bool True if the object was successfully deleted, false otherwise.
+     */
+    public function deleteFromApi() : bool {
+        $data_json = json_encode($this);
+
+        try {
+            $handle = curl_init();
+            curl_setopt($handle, CURLOPT_URL, API_URL . $this::$table);
+            curl_setopt($handle, CURLOPT_HTTPHEADER, array('Content-Type: application/json','Content-Length: ' . strlen($data_json)));
+            curl_setopt($handle, CURLOPT_CUSTOMREQUEST, "DELETE");
+            curl_setopt($handle, CURLOPT_POSTFIELDS, $data_json);
+            curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
+        } catch (Exception $e) {
+            echo "Error: " . $e->getMessage();
+        }
+        $response = $this->curlExec($handle);
+        if (!$response) {
+            echo "<pre>" . htmlspecialchars($response) . "</pre>";
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * Gets the object from the API (and from the database).
+     * @return bool True if the object was successfully retrieved, false otherwise.
+     */
+    public function getFromApi() : bool {
+        $data_json = json_encode($this);
+
+        try {
+            $handle = curl_init();
+            curl_setopt($handle, CURLOPT_URL, API_URL . $this::$table);
+            curl_setopt($handle, CURLOPT_HTTPHEADER, array('Content-Type: application/json','Content-Length: ' . strlen($data_json)));
+            curl_setopt($handle, CURLOPT_CUSTOMREQUEST, "GET");
+            curl_setopt($handle, CURLOPT_POSTFIELDS, $data_json);
+            curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
+        } catch (Exception $e) {
+            echo "Error: " . $e->getMessage();
+        }
+        $response = $this->curlExec($handle);
+        if (!$response) {
+            echo "<pre>" . htmlspecialchars($response) . "</pre>";
+            return false;
+        }
+        return true;
+    }
+
+    public static function getTableFromApi(string $orderby = null, bool $desc = false) : bool {
+        $url = API_URL . "table/" . static::$table;
+        if ($orderby) {
+            $url .= "?orderby=" . $orderby;
+            if ($desc) $url .= "&desc=true";
+        }
+        try {
+            $handle = curl_init();
+            curl_setopt($handle, CURLOPT_URL, $url);
+            curl_setopt($handle, CURLOPT_CUSTOMREQUEST, "GET");
+            curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
+        } catch (Exception $e) {
+            echo "Error: " . $e->getMessage();
+        }
+        $response = static::curlExec($handle);
+        if (!$response) {
+            echo "<pre>" . htmlspecialchars($response) . "</pre>";
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * Executes a cURL request safely and returns the response, or false if an error occurred.
+     * @param CurlHandle $handle The cURL handle to execute.
+     * @return string|false The response from the cURL request, or false if an error occurred.
+     */
     public static function curlExec(CurlHandle $handle) : string|false {
         try {
             $response = curl_exec($handle);
