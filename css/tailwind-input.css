@@ -73,3 +73,16 @@ button:hover {
 a:hover {
     color: var(--color-orange-500);
 }
+
+.error {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    color: white;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    background-color: var(--color-red-500);
+}
