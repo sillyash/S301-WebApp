@@ -21,3 +21,50 @@
     --color-warning: rgb(221, 178, 5);
     --color-valid: rgb(35, 159, 87);
 }
+
+.formRow {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    height: 2.5rem;
+}
+
+.formRow > label {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.formRow > input {
+    height: 100%;
+    padding: 0.5rem;
+    background-color: var(--color-blue-500);
+    border-radius: 0.375rem;
+    color: white;
+}
+
+.formRow > input::placeholder {
+    color: grey;
+}
+
+button {
+    background-color: var(--color-blue-500);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+button:hover {
+    background-color: var(--color-blue-600);
+}

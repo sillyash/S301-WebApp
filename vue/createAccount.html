@@ -1,38 +1,38 @@
 <form class="flex flex-col justify-space-between align-center w-200" method="post" action="./controleur/createAccount.php">
     <a href= "./">
-        <button class="w-full items-center text-center bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 p-4" type="button">
+        <button class="w-full" type="button">
             Se connecter
         </button>
     </a>
 
-    <div class="flex flex-row w-full items-center justify-center align-center my-3 h-10">
-        <label class="flex-1 h-full flex items-center justify-end text-right mx-6" for="loginInter">Login*</label>
-        <input class="flex-2 p-2 h-full bg-blue-500 rounded-md text-white" type="text" name="loginInter" required>
+    <div class="formRow">
+        <label class="flex-1" for="loginInter">Login*</label>
+        <input class="flex-2" type="text" name="loginInter" required>
     </div>
     
-    <div class="flex flex-row w-full items-center justify-center align-center my-3 h-10">
-        <label class="flex-1 h-full flex items-center justify-end text-right mx-6" for="mdpInter">Mot de passe*</label>
-        <input class="flex-2 p-2 h-full bg-blue-500 rounded-md text-white" type="password" name="mdpInter" required>
+    <div class="formRow">
+        <label class="flex-1" for="mdpInter">Mot de passe*</label>
+        <input class="flex-2" type="password" name="mdpInter" required>
     </div>
 
-    <div class="flex flex-row w-full items-center justify-center align-center my-3 h-10">
-        <label class="flex-1 h-full flex items-center justify-end text-right mx-6" for="nomInter">Nom*</label>
-        <input class="flex-2 p-2 h-full bg-blue-500 rounded-md text-white" type="text" name="nomInter" required>
+    <div class="formRow">
+        <label class="flex-1" for="nomInter">Nom*</label>
+        <input class="flex-2" type="text" name="nomInter" required>
     </div>
     
-    <div class="flex flex-row w-full items-center justify-center align-center my-3 h-10">
-        <label class="flex-1 h-full flex items-center justify-end text-right mx-6" for="prenomInter">Prénom*</label>
-        <input class="flex-2 p-2 h-full bg-blue-500 rounded-md text-white" type="text" name="prenomInter" required>
+    <div class="formRow">
+        <label class="flex-1" for="prenomInter">Prénom*</label>
+        <input class="flex-2" type="text" name="prenomInter" required>
     </div>
     
-    <div class="flex flex-row w-full items-center justify-center align-center my-3 h-10">
-        <label class="flex-1 h-full flex items-center justify-end text-right mx-6" for="emailInter">Adresse Mail*</label>
-        <input class="flex-2 p-2 h-full bg-blue-500 rounded-md text-white" type="email" name="emailInter" required>
+    <div class="formRow">
+        <label class="flex-1" for="emailInter">Adresse Mail*</label>
+        <input class="flex-2" type="email" name="emailInter" required>
     </div>
     
-    <div class="flex flex-row w-full items-center justify-center align-center my-3 h-10">
-        <label class="flex-1 h-full flex items-center justify-end text-right mx-6" for="adrInter">Adresse Postale</label>
-        <input class="flex-2 p-2 h-full bg-blue-500 rounded-md text-white" type="text" name="adrInter">
+    <div class="formRow">
+        <label class="flex-1" for="adrInter">Adresse Postale</label>
+        <input class="flex-2" type="text" name="adrInter">
     </div>
 
     <button class="bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 rounded-xl p-4 cursor-pointer" type="submit">
