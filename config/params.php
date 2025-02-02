@@ -21,6 +21,8 @@ define("ASSETS",    realpath(WORKDIR . "/assets"));
 define("ROOT_URL",  "https://projets.iut-orsay.fr/prj-mmorich/S301-WebApp/");
 
 define("API_URL", "https://projets.iut-orsay.fr/prj-mmorich/S301-API/");
-define("HASH_ALGO", "sha256");
+
+define("OPENSSL_ALGO", "AES-128-CTR");
+define("OPENSSL_PASS", "mmorich");
 
 ?>
