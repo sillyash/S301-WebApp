@@ -2,7 +2,7 @@
 <div class="pageTitleBar">
     CE GROUPE > Membres > Changer rôle
 </div>
-
+<!-- TODO add get member + roles from DB -->
 <div class="flex items-center justify-between w-1/2 mt-4">
     <div>Membre 1: </div>
     <div>[ rôle ]</div>
