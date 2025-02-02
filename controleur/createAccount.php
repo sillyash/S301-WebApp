@@ -77,7 +77,8 @@ function sendVerificationEmail(string $login, string $email) : bool {
     $data_json = json_encode($data);
 
     $handle = curl_init();
-    curl_setopt($handle, CURLOPT_URL, API_URL . "Internaute");
+    $url = API_URL . "mail/accountValidation";
+    curl_setopt($handle, CURLOPT_URL, $url);
     curl_setopt($handle, CURLOPT_HTTPHEADER, array('Content-Type: application/json','Content-Length: ' . strlen($data_json)));
     curl_setopt($handle, CURLOPT_POST, 1);
     curl_setopt($handle, CURLOPT_POSTFIELDS, $data_json);

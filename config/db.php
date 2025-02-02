@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . '/../config.php');
+require_once('params.php');
 
 class Database {
     private static $host = DB_HOST;
