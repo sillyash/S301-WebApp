@@ -7,58 +7,58 @@
 </button>
 
 <!-- TODO add get nb votes from DB -->
-<div class="bg-blue-500 text-white">
-    <p><strong>VOTES EN COURS</strong></p>
-    <ul class="w-full">
-        <li class="w-full">
-            <div class="flex items-center justify-between w-full">
-                <div>Vote 1</div>
-                <div>POUR: [nb] | CONTRE: [nb]</div>
-            </div>
-        </li>
-        <li class="w-full">
-            <div class="flex items-center justify-between w-full">
-                <div>Vote 2</div>
-                <div>POUR: [nb] | CONTRE: [nb]</div>
-            </div>
-        </li>
-        <li class="w-full">
-            <div class="flex items-center justify-between w-full">
-                <div>Vote 3</div>
-                <div>POUR: [nb] | CONTRE: [nb]</div>
-            </div>
-        </li>
-    </ul>
-</div>
+<div class="flex space-x-4">
+    <div class="bg-blue-500 text-white rounded-md p-4">
+        <p><strong>VOTES EN COURS</strong></p>
+        <ul class="w-full">
+            <li class="w-full">
+                <div class="flex items-center justify-between w-full">
+                    <div>Vote 1</div>
+                    <div>POUR: [nb] | CONTRE: [nb]</div>
+                </div>
+            </li>
+            <li class="w-full">
+                <div class="flex items-center justify-between w-full">
+                    <div>Vote 2</div>
+                    <div>POUR: [nb] | CONTRE: [nb]</div>
+                </div>
+            </li>
+            <li class="w-full">
+                <div class="flex items-center justify-between w-full">
+                    <div>Vote 3</div>
+                    <div>POUR: [nb] | CONTRE: [nb]</div>
+                </div>
+            </li>
+        </ul>
+    </div>
 
-<!-- TODO add if user is admin button "Declencher vote" -->
-<!-- TODO get propos from DB -->
-<div class="bg-blue-500 text-white">
-    <p><strong>LISTE PROPOSITIONS</strong></p>
-    <ul class="w-full">
-        <li class="w-full">
-            <div class="flex items-center justify-between w-full">
-                <div>PROPO 1</div>
-                <button>
-                    <a href="index.php">Déclencher vote</a>
-                </button>
-            </div>
-        </li>
-        <li class="w-full">
-            <div class="flex items-center justify-between w-full">
-                <div>PROPO 2</div>
-                <button>
-                    <a href="index.php">Déclencher vote</a>
-                </button>
-            </div>
-        </li>
-        <li class="w-full">
-            <div class="flex items-center justify-between w-full">
-                <div>PROPO 3</div>
-                <button>
-                    <a href="index.php">Déclencher vote</a>
-                </button>
-            </div>
-        </li>
-    </ul>
+    <div class="bg-blue-500 text-white rounded-md p-4">
+        <p><strong>LISTE PROPOSITIONS</strong></p>
+        <ul class="w-full">
+            <li class="w-full">
+                <div class="flex items-center justify-between w-full">
+                    <div>PROPO 1</div>
+                    <a href="index.php">
+                        <button>Déclencher vote</button>
+                    </a>
+                </div>
+            </li>
+            <li class="w-full">
+                <div class="flex items-center justify-between w-full">
+                    <div>PROPO 2</div>
+                    <a href="index.php">
+                        <button>Déclencher vote</button>
+                    </a>
+                </div>
+            </li>
+            <li class="w-full">
+                <div class="flex items-center justify-between w-full">
+                    <div>PROPO 3</div>
+                    <a href="index.php">
+                        <button>Déclencher vote</button>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>
