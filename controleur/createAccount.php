@@ -8,13 +8,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         $internaute = new Internaute($_POST, CONSTRUCT_POST);
         $data_json = json_encode($internaute);
-        include(VUE . "/accueil.php");
     } catch (Exception $e) {
         echo "Error: " . $e->getMessage();
         exit();
     }
-    echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> TEST >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>";
-    var_dump($_POST);
     try {
         $handle = curl_init();
         curl_setopt($handle, CURLOPT_URL, API_URL . "Internaute");
@@ -31,11 +28,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $httpCode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
 
-        if ($httpCode > 299 || $httpCode < 200) {
-            //echo "<pre>" . htmlspecialchars($response) . "</pre>";
-            //throw new Exception("Error creating account: API returned HTTP code $httpCode.");
-            //exit();
-
+        if ($httpCode >= 200 && $httpCode < 300) {
+            header("Location: login.php");
+            echo "<div><p>Compte créé! Veuillez vous connecter.</p></div>";
+            exit();
+        } else {
+            // Handle API errors
             $response = json_decode($response, true);
             $sqlError = $response['error'];
 
@@ -49,7 +47,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } catch (Exception $e) {
         echo "<div class='error'><p>Error: " . $e->getMessage(). "</p></div>";
     }
-    include(VUE . "/accueil.php");
 }
 require_once VUE . '/fin.php';
 ?>
