@@ -698,6 +698,9 @@
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
   }
+  .\!text-blue-500 {
+    color: var(--color-blue-500) !important;
+  }
   .\!text-red-500 {
     color: var(--color-red-500) !important;
   }
@@ -707,6 +710,13 @@
   .shadow-md {
     --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .hover\:\!text-blue-600 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-blue-600) !important;
+      }
+    }
   }
   .hover\:\!text-orange-500 {
     &:hover {
