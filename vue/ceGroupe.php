@@ -55,7 +55,8 @@
             <li class="w-full">
                 <div class="flex items-center justify-between w-full">
                     <div>PROPO 3</div>
-                    <a href="index.php">
+                    href="<?php echo ROOT_URL.'/controleur/navigation.php/?membres'?>"
+                    <a href="<?php echo ROOT_URL.'/controleur/navigation.php/?vote=true'?>">
                         <button class="m-4 !bg-white !text-red-500 hover:!text-orange-500">Déclencher vote</button>
                     </a>
                 </div>
