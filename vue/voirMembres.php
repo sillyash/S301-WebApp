@@ -43,7 +43,7 @@
             </div>
         </li>
     </ul>
-    <a href="<?php echo ROOT_URL.'/controleur/navigation.php/?inviterMembre=true'?>">
+    <a href="<?php echo ROOT_URL.'/controleur/inviterMembre.php'?>">
         <button class="w-full">Inviter un nouveau membre</button>
     </a>
 </div>
