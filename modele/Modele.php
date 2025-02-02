@@ -1,4 +1,6 @@
 <?php
+require_once(__DIR__ . "/../config/params.php");
+require_once(CONFIG . "/db.php");
 
 define('CONSTRUCT_POST', 0);
 define('CONSTRUCT_PUT', 1);
@@ -41,6 +43,7 @@ abstract class Modele extends stdClass {
      * This function is used to initialize the Model.
      */
     public static function init() {
+        Database::createConnection();
         $class = get_called_class();
         $class::$cle = [];
         $class::$requiredAttributes = [];

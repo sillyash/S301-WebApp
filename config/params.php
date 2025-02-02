@@ -11,6 +11,11 @@ if (DEV) {
     ini_set('display_errors', 0);
 }
 
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'prj-mmorich');
+define('DB_USER', 'prj-mmorich');
+define('DB_PASS', 'vZnmFpECUAvJTwCf');
+
 define("WORKDIR",   realpath(__DIR__ . "/../"));
 define("CONFIG",    realpath(WORKDIR . "/config"));
 define("VUE",       realpath(WORKDIR . "/vue"));
