@@ -43,7 +43,6 @@ require_once VUE . '/debut.php';
     <a>
         <button class="mb-3">Supprimer mon Compte</button>
     </a>
-    href="<?php echo ROOT_URL.'/assets/favicon.svg'; ?>
     <a href="<?php echo ROOT_URL.'/controleur/logout.php'?>">
         <button class="mb-3">Déconnexion</button>
     </a>
