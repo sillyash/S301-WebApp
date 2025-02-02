@@ -60,7 +60,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $passwordBDD = $response[0]['mdpInter'];
         $passwordForm = $_POST['mdpInter'];
         if ($passwordBDD == $passwordForm) {
-            require(VUE . "/accueil.php");
+            $_SESSION["logged"] = true;
+            $_SESSION["login"] = $login;
+            header("Location: " . $_SERVER['PHP_SELF']);
         } else {
             echo "<div class='error'><p>Erreur de connexion</p></div>";
         }
