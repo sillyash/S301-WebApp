@@ -7,21 +7,26 @@
     <ul>
         <li>
             <span>
-                <img class="block size-[calc(var(--height-header)_-_20px)] mx-auto" src="<?php echo ROOT_URL.'/assets/admin-sm.png'; ?>" alt="admin-logo"/>
-                MON GROUPE <a href="index.php">➜</a>
+                <img class="block size-[calc(var(--height-header)_-_20px)] mx-auto" 
+                    src="<?php echo ROOT_URL.'/assets/admin-sm.png'; ?>" alt="admin-logo"/>
+                <span class="ml-2">MON GROUPE</span>
+                <a href="index.php" class="ml-auto">➜</a>
             </span>
         </li>
         <li>
             <span>
-                GROUPE 1 <a href="index.php">➜</a>
+                <span>GROUPE 1</span>
+                <a href="index.php" class="ml-auto">➜</a>
             </span>
         </li>
         <li>
             <span>
-                GROUPE 2 <a href="index.php">➜</a>
+                <span>GROUPE 2</span>
+                <a href="index.php" class="ml-auto">➜</a>
             </span>
         </li>
     </ul>
+    
 
     <a href= "<?php echo ROOT_URL.'/controleur/createGroup.php?createGroup=true' ?>">
         <button class="w-full" type="button">
