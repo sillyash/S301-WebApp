@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $passwordBDD = $response[0]['mdpInter'];
         $passwordForm = $_POST['mdpInter'];
         if ($passwordBDD == $passwordForm) {
-            echo "<div class='success'><p>Connexion réussie</p></div>";
+            require(VUE . "/accueil.php");
         } else {
             echo "<div class='error'><p>Erreur de connexion</p></div>";
         }
