@@ -4,19 +4,19 @@
 <!-- TODO retrieve data from BDD -->
 <!-- TODO change form action -->
 <!-- TODO handle reactions here -->
-<div>
+<div class="bg-white rounded-md w-1/2">
     <p>[TITRE]</p>
     <p>[THEMES]</p>
     <hr>
     <p>Description</p>
 </div>
 <!-- TODO maybe this should be a seperate component? -->
-<div>
+<div class="w-1/2">
     <p>ESPACE COMMENTAIRES</p>
     <form>
-        <div class="formRow">
-            <label class="flex-1" for="loginInter">Login*</label>
-            <input class="flex-2" type="text" name="loginInter" required>
+        <div>
+            <label class="flex-1" for="comment">[USERNAME]</label>
+            <input class="flex-2" type="text" name="comment" required>
         </div>
         <button class="!bg-white !text-blue-500 hover:!text-blue-600" type="submit">
             Ajouter un commentaire
