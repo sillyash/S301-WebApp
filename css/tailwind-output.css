@@ -651,6 +651,9 @@
   .rounded-md {
     border-radius: var(--radius-md);
   }
+  .\!bg-white {
+    background-color: var(--color-white) !important;
+  }
   .bg-black {
     background-color: var(--color-black);
   }
@@ -689,8 +692,8 @@
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
   }
-  .text-orange-500 {
-    color: var(--color-orange-500);
+  .\!text-orange-500 {
+    color: var(--color-orange-500) !important;
   }
   .text-white {
     color: var(--color-white);
@@ -698,13 +701,6 @@
   .shadow-md {
     --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .hover\:text-red-500 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-red-500);
-      }
-    }
   }
 }
 .formRow {
