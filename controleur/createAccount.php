@@ -44,6 +44,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             } else {
                 echo "<div class='error'><p>Error: $sqlError</p></div>";
             }
+        } else {
+            include(VUE . "/accueil.php");
         }
     } catch (Exception $e) {
         echo "<div class='error'><p>Error: " . $e->getMessage(). "</p></div>";
