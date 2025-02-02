@@ -1,4 +1,4 @@
-<form class="flex flex-col justify-space-between align-center w-200" method="post" action="<?php echo ROOT_URL . '/controleur/createAccount.php'; ?>">
+<form class="flex flex-col justify-space-between align-center w-200 mt-4" method="post" action="<?php echo ROOT_URL . '/controleur/createAccount.php'; ?>">
     <a href= "<?php echo ROOT_URL . '/controleur/login.php'; ?>">
         <button class="w-full" type="button">
             Se connecter
