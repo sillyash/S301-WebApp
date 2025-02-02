@@ -4,5 +4,5 @@ require(VUE . "/debut.php");
 
 include(VUE . "/createPropo.php");
 
-require_once VUE . 'fin.php';
+require_once VUE . '/fin.php';
 ?>
