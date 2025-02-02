@@ -7,7 +7,7 @@
     <div>Membre 1: </div>
     <div>[ rôle ]</div>
 
-
+<!-- TODO change form action -->
     <form class="bg-white rounded-md p-4" action="<?php echo ROOT_URL.'/controleur/modifRole.php'?>">
         <div class="flex">
             <div class="mr-4">

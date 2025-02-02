@@ -10,7 +10,7 @@
             <div class="flex items-center justify-between w-full">
                 <div>Membre 1</div>
                 <div>[ rôle ]</div>
-                <a href="<?php echo ROOT_URL.'/controleur/navigation.php/?modifRole=true'?>">
+                <a href="<?php echo ROOT_URL.'/controleur/modifierRole.php'?>">
                     <button class="m-4 !bg-white !text-red-500 hover:!text-orange-500">Changer rôle</button>
                 </a>
                 <a href="index.php">
@@ -22,7 +22,7 @@
             <div class="flex items-center justify-between w-full">
                 <div>Membre 2</div>
                 <div>[ rôle ]</div>
-                <a href="<?php echo ROOT_URL.'/controleur/navigation.php/?modifRole=true'?>">
+                <a href="<?php echo ROOT_URL.'/controleur/modifierRole.php'?>">
                     <button class="m-4 !bg-white !text-red-500 hover:!text-orange-500">Changer rôle</button>
                 </a>
                 <a href="index.php">
@@ -34,7 +34,7 @@
             <div class="flex items-center justify-between w-full">
                 <div>Membre 3</div>
                 <div>[ rôle ]</div>
-                <a href="<?php echo ROOT_URL.'/controleur/navigation.php/?modifRole=true'?>">
+                <a href="<?php echo ROOT_URL.'/controleur/modifierRole.php'?>">
                     <button class="m-4 !bg-white !text-red-500 hover:!text-orange-500">Changer rôle</button>
                 </a>
                 <a href="index.php">
