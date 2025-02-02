@@ -8,39 +8,43 @@ require_once VUE . '/debut.php';
 
 <!-- TODO: for loop to retrieve data for a user -->
 <!-- TODO: opt - add edit field possibility -->
-<form class="flex flex-col justify-space-between align-center w-200" method="post" action="./controleur/createGroup.php">
-    <div class="formRow">
-        <label class="flex-1" for="loginInter">Login:</label>
-        <input class="flex-2" type="text" name="loginInter" required>
+<div class="flex flex-col justify-space-between align-center w-200">
+    <div>
+        <p class="flex-1">Login:</p>
+        <p> [login] </p>
     </div>
     
-    <div class="formRow">
-        <label class="flex-1" for="mdpInter">Mot de passe:</label>
-        <input class="flex-2" type="password" name="mdpInter" required>
+    <div>
+        <p class="flex-1">Mot de passe:</p>
+        <p> [mdp] </p>
     </div>
 
-    <div class="formRow">
-        <label class="flex-1" for="emailInter">Adresse Mail:</label>
-        <input class="flex-2" type="email" name="emailInter" required>
+    <div>
+        <p class="flex-1">Adresse Mail:</p>
+        <p> [email] </p>
     </div>
 
-    <div class="formRow">
-        <label class="flex-1" for="nomInter">Nom:</label>
-        <input class="flex-2" type="text" name="nomInter" required>
+    <div>
+        <p class="flex-1">Nom:</p>
+        <p> [nom] </p>
     </div>
     
-    <div class="formRow">
-        <label class="flex-1" for="prenomInter">Prénom:</label>
-        <input class="flex-2" type="text" name="prenomInter" required>
+    <div>
+        <p class="flex-1">Prénom:</p>
+        <p> [prenom] </p>
     </div>
 
-    <div class="formRow">
-        <label class="flex-1" for="adrInter">Adresse Postale:</label>
-        <input class="flex-2" type="text" name="adrInter">
+    <div>
+        <p class="flex-1">Adresse Postale:</p>
+        <p> [adr] </p>
     </div>
 
-    <!-- TODO: controller add checks for valid input for each field -->
     <!-- TODO: change action of each button -->
-    <button type="submit" class="mb-3">Supprimer mon Compte</button>
-    <button type="submit" class="mb-3">Déconnexion</button>
-</form>
+    <a>
+        <button class="mb-3">Supprimer mon Compte</button>
+    </a>
+    href="<?php echo ROOT_URL.'/assets/favicon.svg'; ?>
+    <a href="<?php echo ROOT_URL.'/controleur/logout.php'?>">
+        <button class="mb-3">Déconnexion</button>
+    </a>
+</div>
