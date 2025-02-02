@@ -596,6 +596,9 @@
   .h-\(--height-header\) {
     height: var(--height-header);
   }
+  .h-5 {
+    height: calc(var(--spacing) * 5);
+  }
   .h-full {
     height: 100%;
   }
@@ -604,6 +607,9 @@
   }
   .w-200 {
     width: calc(var(--spacing) * 200);
+  }
+  .w-auto {
+    width: auto;
   }
   .w-full {
     width: 100%;
@@ -662,6 +668,10 @@
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  .text-base {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
   }
   .text-white {
     color: var(--color-white);
