@@ -8,6 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         $internaute = new Internaute($_POST, CONSTRUCT_POST);
         $data_json = json_encode($internaute);
+        include(VUE . "/accueil.php");
     } catch (Exception $e) {
         echo "Error: " . $e->getMessage();
         exit();
@@ -44,12 +45,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             } else {
                 echo "<div class='error'><p>Error: $sqlError</p></div>";
             }
-        } else {
-            include(VUE . "/accueil.php");
         }
     } catch (Exception $e) {
         echo "<div class='error'><p>Error: " . $e->getMessage(). "</p></div>";
     }
+    include(VUE . "/accueil.php");
 }
 require_once VUE . '/fin.php';
 ?>
