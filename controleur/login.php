@@ -2,7 +2,12 @@
 require_once(__DIR__ . "/../config/params.php");
 require_once(MODELE . "/Internaute.php");
 require(VUE . "/debut.php");
-require(VUE . "/login.php");
+
+if (isset($_SESSION["logged"])){
+    if ($_SESSION["logged"] == "false"){
+        include(VUE . "/login.php");
+    }
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $login="";

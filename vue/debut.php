@@ -27,6 +27,7 @@
 				include(VUE . "/header.php");
 			}
 		} else {
+			$_SESSION["logged"] = "false";
 			include(VUE . "/headerLanding.php");
 		}
 		?>
