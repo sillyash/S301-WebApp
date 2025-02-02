@@ -1,11 +1,7 @@
-<?php
-require_once '../config/params.php';
-require_once VUE . '/debut.php';
-?>
+
 <div class="pageTitleBar">
     Mes Propositions
 </div>
-
 <div>
     <!-- TODO add for loop to get all propos an internaute has done -->
     <!-- TODO if there are no propos, display "Pas de propositions!" or smt -->
@@ -29,7 +25,7 @@ require_once VUE . '/debut.php';
             </div>
         </li>
     </ul>
-    <a href= "<?php echo ROOT_URL .'/controleur/createPropo.php?createPropo=true'?>">
+    <a href= "<?php echo ROOT_URL .'/controleur/createPropo.php'?>">
         <button class="w-full" type="button">
             Créer une proposition
         </button>

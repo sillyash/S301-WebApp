@@ -1,11 +1,7 @@
-<?php
-require_once '../config/params.php';
-require_once VUE . '/debut.php';
-?>
+
 <div class="pageTitleBar">
     Mon Compte
 </div>
-
 <!-- TODO: for loop to retrieve data for a user -->
 <!-- TODO: opt - add edit field possibility -->
 <div class="flex flex-col justify-space-between align-center w-200">
