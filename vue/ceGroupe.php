@@ -1,7 +1,7 @@
 <div class="pageTitleBar">
     CE GROUPE
 </div>
-<a href="<?php echo ROOT_URL.'/controleur/navigation.php/?membres'?>">
+<a href="<?php echo ROOT_URL.'/controleur/voirMembres.php'?>">
     <button class="m-4">Voir membres</button>
 </a>
 
@@ -39,7 +39,7 @@
             <li class="w-full">
                 <div class="flex items-center justify-between w-full">
                     <div>PROPO 1</div>
-                    <a href="index.php">
+                    <a href="<?php echo ROOT_URL.'/controleur/lancerVote.php'?>">
                         <button class="m-4 !bg-white !text-red-500 hover:!text-orange-500">Déclencher vote</button>
                     </a>
                 </div>
@@ -47,7 +47,7 @@
             <li class="w-full">
                 <div class="flex items-center justify-between w-full">
                     <div>PROPO 2</div>
-                    <a href="index.php">
+                    <a href="<?php echo ROOT_URL.'/controleur/lancerVote.php'?>">
                         <button class="m-4 !bg-white !text-red-500 hover:!text-orange-500">Déclencher vote</button>
                     </a>
                 </div>
@@ -55,8 +55,7 @@
             <li class="w-full">
                 <div class="flex items-center justify-between w-full">
                     <div>PROPO 3</div>
-                    href="<?php echo ROOT_URL.'/controleur/navigation.php/?membres'?>"
-                    <a href="<?php echo ROOT_URL.'/controleur/navigation.php/?vote=true'?>">
+                    <a href="<?php echo ROOT_URL.'/controleur/lancerVote.php'?>">
                         <button class="m-4 !bg-white !text-red-500 hover:!text-orange-500">Déclencher vote</button>
                     </a>
                 </div>
