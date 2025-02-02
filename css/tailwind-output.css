@@ -557,9 +557,6 @@
   .my-4 {
     margin-block: calc(var(--spacing) * 4);
   }
-  .mt-2 {
-    margin-top: calc(var(--spacing) * 2);
-  }
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
@@ -610,9 +607,6 @@
   }
   .min-h-\[calc\(100vh_-_var\(--height-header\)_-_var\(--height-footer\)\)\] {
     min-height: calc(100vh - var(--height-header) - var(--height-footer));
-  }
-  .w-1\/2 {
-    width: calc(1/2 * 100%);
   }
   .w-200 {
     width: calc(var(--spacing) * 200);

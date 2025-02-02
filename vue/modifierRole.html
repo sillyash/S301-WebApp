@@ -3,13 +3,13 @@
     CE GROUPE > Membres > Changer rôle
 </div>
 
-<div class="flex items-center justify-between w-1/2 mt-4">
+<div class="flex items-center justify-between">
     <div>Membre 1: </div>
     <div>[ rôle ]</div>
 
 
     <form class="bg-white rounded-md p-4" action="<?php echo ROOT_URL.'/controleur/modifRole.php'?>">
-        <div class="flex items-center mr-4 mt-2">
+        <div class="flex">
             <div class="mr-4">
                 <label for="admin">
                     Administrateur
@@ -23,7 +23,7 @@
                 <input id="moderateur" type="checkbox">
             </div>
         </div>
-        <div class="flex items-center mr-4 mt-2">
+        <div class="flex">
             <div class="mr-4">
                 <label for="organisateur">
                     Organisateur
@@ -42,5 +42,5 @@
                 Enregistrer ➜
             </button>
         </div>
-    </form>
+    </form>    
 </div>
