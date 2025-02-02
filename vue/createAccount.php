@@ -31,8 +31,8 @@
     </div>
     
     <div class="formRow">
-        <label class="flex-1" for="adrInter">Adresse Postale</label>
-        <input class="flex-2" type="text" name="adrInter">
+        <label class="flex-1" for="adrInter">Adresse Postale*</label>
+        <input class="flex-2" type="text" name="adrInter" required>
     </div>
 
     <button type="submit">
