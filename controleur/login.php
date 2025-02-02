@@ -5,16 +5,23 @@ require(VUE . "/debut.php");
 require(VUE . "/login.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $login="";
     try {
         $internaute = new Internaute($_POST, CONSTRUCT_GET);
-    } catch (Exception $e) {
-        echo "Error: " . $e->getMessage();
+        $login = $internaute->get("loginInter");
+    } catch (Throwable $e) {
+        echo "<div class='error'>";
+        echo "<p>Error: " . $e->getMessage() . "<p>";
+        echo "<pre> INTERNAUTE: " . var_dump($internaute) . "</pre>";
+        echo "<pre> POST: " . var_dump($_POST) . "</pre>";
+        echo "</div>";
         exit();
     }
-     
+    
+    $response="";
     try {
         $handle = curl_init();
-        $url = API_URL . "Internaute?login=" . $internaute->get("loginInter");
+        $url = API_URL . "Internaute?loginInter=$login";
         curl_setopt($handle, CURLOPT_URL, $url);
         curl_setopt($handle, CURLOPT_CUSTOMREQUEST, "GET");
         curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
@@ -37,8 +44,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             echo "<div class='error'><p>Error: $sqlError</p></div>";
         }
-    } catch (Exception $e) {
+    } catch (Throwable $e) {
         echo "<div class='error'><p>Error: " . $e->getMessage(). "</p></div>";
+    }
+
+    $response = json_decode($response, true);
+    if (!$response) {
+        echo "<div class='error'><p>Erreur de connexion : l'utilisateur \"$login\" n'existe pas.</p></div>";
+    } else {
+        $passwordBDD = $response[0]['mdpInter'];
+        $passwordForm = $_POST['mdpInter'];
+        if ($passwordBDD == $passwordForm) {
+            echo "<div class='success'><p>Connexion réussie</p></div>";
+        } else {
+            echo "<div class='error'><p>Erreur de connexion</p></div>";
+        }
     }
 }
 require(VUE . "/fin.php");

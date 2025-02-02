@@ -1,21 +1,21 @@
 <div class="flex justify-space-between align-center">
-    <img class="flex-start size-72" src="assets/favicon.svg" alt="logo">
+    <img class="flex-start size-72" src="<?php echo ROOT_URL . 'assets/favicon.svg'; ?>" alt="logo">
     
-    <form action="./controleur/login.php" method="POST" class="flex flex-col mx-8 my-4 w-200 cursor-pointer">
-        <a href="./vue/createAccount.php">
+    <form action="<?php echo ROOT_URL . '/controleur/login.php'; ?>" method="POST" class="flex flex-col mx-8 my-4 w-200 cursor-pointer">
+        <a href="<?php echo ROOT_URL . '/controleur/createAccount.php'; ?>">
             <button class="w-full" type="button">
                 Créer un Compte!
             </button>
         </a>
 
         <div class="formRow">
-            <label class="flex-1" for="login">Login</label>
-            <input class="flex-2" type="text" name="login" required>
+            <label class="flex-1" for="loginInter">Login</label>
+            <input class="flex-2" type="text" name="loginInter" required>
         </div>
 
         <div class="formRow">
-            <label class="flex-1" for="password">Mot de passe</label>
-            <input class="flex-2" type="password" name="password" required>
+            <label class="flex-1" for="mdpInter">Mot de passe</label>
+            <input class="flex-2" type="password" name="mdpInter" required>
         </div>
 
         <button type="submit">
