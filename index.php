@@ -1,7 +1,7 @@
 <?php
 require_once("config/params.php");
 
-include(VUE . "/debut.php");
+require(VUE . "/debut.php");
 
 if ($_SESSION["logged"] == "true") {
     if (isset($_GET["propos"]) || isset($_GET["account"]) || isset($_GET["home"])) {
@@ -13,5 +13,5 @@ if ($_SESSION["logged"] == "true") {
     include(CONTROLEUR . "/login.php");
 }
 
-include(VUE . "/fin.html");
+require(VUE . "/fin.html");
 ?>
