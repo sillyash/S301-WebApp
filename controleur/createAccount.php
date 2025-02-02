@@ -30,7 +30,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($httpCode >= 200 && $httpCode < 300) {
             header("Location: login.php");
-            echo "<div><p>Compte créé! Veuillez vous connecter.</p></div>";
             exit();
         } else {
             // Handle API errors
