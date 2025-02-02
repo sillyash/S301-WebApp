@@ -2,7 +2,7 @@
 require_once(__DIR__ . "/../config/params.php");
 
 $propos = isset($_GET["propos"]) ? true : false;
-$invite = isset($_GET["invite"]) ? true : false;
+$invite = isset($_GET["inviterMembre"]) ? true : false;
 $account = isset($_GET["account"]) ? true : false; // TODO get the following from DB instead of true/false (use ids)
 $ceGroupe = isset($_GET["ceGroupe"]) ? true : false;
 $membres = isset($_GET["membres"]) ? true : false;
