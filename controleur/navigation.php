@@ -3,7 +3,7 @@ require_once(__DIR__ . "/../config/params.php");
 
 $propos = isset($_GET["propos"]) ? true : false;
 $account = isset($_GET["account"]) ? true : false;
-$account = isset($_GET["ceGroupe"]) ? true : false;
+$ceGroupe = isset($_GET["ceGroupe"]) ? true : false;
 require(VUE . "/debut.php");
 if ($propos){
     include(VUE . "/mesPropos.html");
