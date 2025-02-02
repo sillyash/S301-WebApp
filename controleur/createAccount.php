@@ -20,6 +20,7 @@ require_once VUE . '/fin.php';
 function handleForm() : bool {
     try {
         Internaute::init();
+        $_POST["compteValide"] = false;
         $internaute = new Internaute($_POST, CONSTRUCT_POST);
         $data_json = json_encode($internaute);
     } catch (Exception $e) {
