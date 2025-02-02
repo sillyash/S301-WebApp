@@ -10,5 +10,5 @@ if ($createGroup){
 }else {
     include(VUE . "/accueil.php");
 }
-require(VUE . 'fin.php');
+require(VUE . '/fin.php');
 ?>
