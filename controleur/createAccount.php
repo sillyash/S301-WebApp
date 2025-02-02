@@ -2,15 +2,22 @@
 require_once(__DIR__ . "/../config/params.php");
 require_once(MODELE . "/Internaute.php");
 require_once(VUE . "/debut.php");
-require(VUE . "/createAccount.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $success = handleForm();
+} else {
+    require(VUE . "/createAccount.php");
+}
+
+require_once VUE . '/fin.php';
+
+function handleForm() : bool {
     try {
         $internaute = new Internaute($_POST, CONSTRUCT_POST);
         $data_json = json_encode($internaute);
     } catch (Exception $e) {
         echo "Error: " . $e->getMessage();
-        exit();
+        return false;
     }
     try {
         $handle = curl_init();
@@ -23,14 +30,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if (!$response) {
             throw new Exception("Error executing POST request");
-            exit();
+            return false;
         }
 
         $httpCode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
 
         if ($httpCode >= 200 && $httpCode < 300) {
-            header("Location: login.php");
-            exit();
+            require(VUE . "/login.php");
+            echo "<div class='success'><p>Account created successfully! Please validate your email to activate your account.</p></div>";
         } else {
             // Handle API errors
             $response = json_decode($response, true);
@@ -46,6 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } catch (Exception $e) {
         echo "<div class='error'><p>Error: " . $e->getMessage(). "</p></div>";
     }
+    return true;
 }
-require_once VUE . '/fin.php';
+
 ?>
