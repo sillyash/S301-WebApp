@@ -6,9 +6,9 @@ $createGroup = isset($_GET["createGroup"]) ? true : false;
 
 require(VUE . "/debut.php");
 if ($createGroup){
-    include(VUE . "/createGroup.html");
+    include(VUE . "/createGroup.php");
 }else {
-    include(VUE . "/accueil.html");
+    include(VUE . "/accueil.php");
 }
-require(VUE . "/fin.html");
+require_once VUE . 'fin.php';
 ?>

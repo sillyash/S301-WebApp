@@ -1,5 +1,4 @@
-<?php session_start();
-$_SESSION["logged"] = "true"; ?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -22,9 +21,9 @@ $_SESSION["logged"] = "true"; ?>
 		</a>
 		<?php
 		if ($_SESSION["logged"] == "false"){
-			include(VUE . "/headerLanding.html");
+			include(VUE . "/headerLanding.php");
 		} else {
-			include(VUE . "/header.html");
+			include(VUE . "/header.php");
 		}
 		?>
 	</header>

@@ -1,3 +1,6 @@
+<?php
+require_once VUE . '/debut.php';
+?>
 <div class="pageTitleBar">
     Créer une Proposition
 </div>

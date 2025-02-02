@@ -1,3 +1,7 @@
+<?php
+require_once '../config/params.php';
+require_once VUE . '/debut.php';
+?>
 <div class="pageTitleBar">
     Mes Propositions
 </div>
@@ -31,3 +35,4 @@
         </button>
     </a>
 </div>
+

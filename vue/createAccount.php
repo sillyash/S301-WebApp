@@ -1,3 +1,6 @@
+<?php
+require_once VUE . '/debut.php';
+?>
 <form class="flex flex-col justify-space-between align-center w-200" method="post" action="./controleur/createAccount.php">
     <a href= "./">
         <button class="w-full" type="button">

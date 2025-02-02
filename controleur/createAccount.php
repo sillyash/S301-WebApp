@@ -1,7 +1,6 @@
 <?php
 require_once(__DIR__ . "/../config/params.php");
 require_once(MODELE . "/Internaute.php");
-require(VUE . "/debut.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
@@ -36,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $response = json_decode($response, true);
             $sqlError = $response['error'];
 
-            include(VUE . "/createAccount.html");
+            include(VUE . "/createAccount.php");
             if (Internaute::isSqlDuplicate($sqlError)) {
                 echo "<div class='error'><p>Error: login already exists</p></div>";
             } else {
@@ -47,5 +46,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<div class='error'><p>Error: " . $e->getMessage(). "</p></div>";
     }
 }
-require(VUE . "/fin.html");
+require_once VUE . 'fin.php';
 ?>

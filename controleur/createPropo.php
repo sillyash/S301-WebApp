@@ -1,12 +1,10 @@
 <?php
 require_once(__DIR__ . "/../config/params.php");
 
-$createPropo = isset($_GET["createPropo"]) ? true : false;
-require(VUE . "/debut.php");
 if ($createPropo){
-    include(VUE . "/createPropo.html");
+    include(VUE . "/createPropo.php");
 }else {
-    include(VUE . "/mesPropos.html");
+    include(VUE . "/mesPropos.php");
 }
-require(VUE . "/fin.html");
+require_once VUE . 'fin.php';
 ?>

@@ -1,8 +1,11 @@
+<?php
+require_once VUE . '/debut.php';
+?>
 <div class="flex justify-space-between align-center">
     <img class="flex-start size-72" src="assets/favicon.svg" alt="logo">
     
-    <form action="./?home=true" method="GET" class="flex flex-col mx-8 my-4 w-200 cursor-pointer">
-        <a href="./?create=true">
+    <form action="./controleur/login.php" method="POST" class="flex flex-col mx-8 my-4 w-200 cursor-pointer">
+        <a href="./vue/createAccount.php">
             <button class="w-full" type="button">
                 Créer un Compte!
             </button>

@@ -1,3 +1,7 @@
+<?php
+require_once '../config/params.php';
+require_once VUE . '/debut.php';
+?>
 <div class="pageTitleBar">
     Mon Compte
 </div>

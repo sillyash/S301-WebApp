@@ -1,4 +1,6 @@
-<!-- TODO add get group name from DB -->
+<?php
+require_once VUE . '/debut.php';
+?>
 <div class="pageTitleBar">
     CE GROUPE > Membres
 </div>
