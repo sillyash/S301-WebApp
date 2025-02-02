@@ -641,6 +641,9 @@
   .bg-black {
     background-color: var(--color-black);
   }
+  .bg-blue-500 {
+    background-color: var(--color-blue-500);
+  }
   .bg-gray-200 {
     background-color: var(--color-gray-200);
   }
