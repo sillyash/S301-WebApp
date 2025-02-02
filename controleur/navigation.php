@@ -14,7 +14,7 @@ if ($propos){
 }else if ($ceGroupe){
     include(VUE . "/ceGroupe.html");
 }else if ($membres){
-    include(VUE . "/membres.html");
+    include(VUE . "/voirMembres.html");
 } else {
     include(VUE . "/accueil.html");
 }
