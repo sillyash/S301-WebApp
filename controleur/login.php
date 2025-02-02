@@ -4,7 +4,7 @@ require_once(MODELE . "/Internaute.php");
 require(VUE . "/debut.php");
 
 if (isset($_SESSION["logged"])){
-    if ($_SESSION["logged"] == "true"){
+    if ($_SESSION["logged"] == true){
         include(VUE . "/accueil.php");
     } else {
         include(VUE . "/login.php");

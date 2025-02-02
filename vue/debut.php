@@ -21,7 +21,7 @@
 		</a>
 		<?php
 		if (isset($_SESSION["logged"])){
-			if ($_SESSION["logged"] == "false"){
+			if ($_SESSION["logged"] == false){
 				include(VUE . "/headerLanding.php");
 			} else {
 				include(VUE . "/header.php");
