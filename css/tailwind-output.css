@@ -593,8 +593,8 @@
   .h-\(--height-header\) {
     height: var(--height-header);
   }
-  .h-5 {
-    height: calc(var(--spacing) * 5);
+  .h-4 {
+    height: calc(var(--spacing) * 4);
   }
   .h-full {
     height: 100%;
