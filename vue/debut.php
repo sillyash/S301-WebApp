@@ -20,10 +20,14 @@
 			<img class="block size-[calc(var(--height-header)_-_20px)] mx-auto" src="<?php echo ROOT_URL.'/assets/favicon.svg'; ?>" alt="logo"/>
 		</a>
 		<?php
-		if ($_SESSION["logged"] == "false"){
-			include(VUE . "/headerLanding.php");
+		if (isset($_SESSION["logged"])){
+			if ($_SESSION["logged"] == "false"){
+				include(VUE . "/headerLanding.php");
+			} else {
+				include(VUE . "/header.php");
+			}
 		} else {
-			include(VUE . "/header.php");
+			include(VUE . "/headerLanding.php");
 		}
 		?>
 	</header>

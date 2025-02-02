@@ -1,6 +1,7 @@
 <?php
 require_once(__DIR__ . "/../config/params.php");
 require_once(MODELE . "/Internaute.php");
+require_once(VUE . "/debut.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
@@ -46,5 +47,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<div class='error'><p>Error: " . $e->getMessage(). "</p></div>";
     }
 }
-require_once VUE . 'fin.php';
+require_once VUE . '/fin.php';
 ?>

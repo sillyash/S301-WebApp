@@ -2,6 +2,7 @@
 require_once(__DIR__ . "/../config/params.php");
 require_once(MODELE . "/Internaute.php");
 require(VUE . "/debut.php");
+require(VUE . "/login.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {

@@ -1,6 +1,3 @@
-<?php
-require_once VUE . '/debut.php';
-?>
 <div class="pageTitleBar">
     CE GROUPE
 </div>

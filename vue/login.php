@@ -1,6 +1,3 @@
-<?php
-require_once VUE . '/debut.php';
-?>
 <div class="flex justify-space-between align-center">
     <img class="flex-start size-72" src="assets/favicon.svg" alt="logo">
     

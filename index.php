@@ -1,12 +1,18 @@
 <?php
 require_once("config/params.php");
-require(VUE . "/debut.php");
 
-if ($_SESSION["logged"] == "true") {
+if (isset($_SESSION["logged"])) {
+    if ($_SESSION["logged"] == true) {
+        include(VUE . "/debut.php");
+        include(VUE . "/accueil.php");
+        require(VUE . "/fin.php");
+    } else {
+        include(CONTROLEUR . "/login.php");
+    }
+    include(VUE . "/debut.php");
     include(VUE . "/accueil.php");
+    require(VUE . "/fin.php");
 } else {
-    include(VUE . "/login.php");
+    include(CONTROLEUR . "/login.php");
 }
-
-require(VUE . "/fin.php");
 ?>
