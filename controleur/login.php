@@ -5,21 +5,16 @@ require(VUE . "/debut.php");
 
 if (isset($_SESSION["logged"])){
     if ($_SESSION["logged"] == true){
-        include(VUE . "/accueil.php");
+        header("Location: ./../index.php");
     }
 } else {
     include(VUE . "/login.php");
 }
-
+    
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $success = handleForm();
     if ($success) {
-        $_SESSION["logged"] = true;
-        $_SESSION["login"] = $login;
         header("Location: " . $_SERVER['PHP_SELF']);
-        include(VUE . "/accueil.php");
-    } else {
-        include(VUE . "/login.php");
     }
 }
 
@@ -73,13 +68,26 @@ function handleForm() : bool {
         echo "<div class='error'><p>Erreur de connexion : l'utilisateur \"$login\" n'existe pas.</p></div>";
         return false;
     } else {
+        $compteValide = $response[0]['compteValide'];
+        
+        if (!$compteValide) {
+            echo "<div class='error'><p>Erreur de connexion : le compte n'est pas validé.";
+            echo "Veuillez verifier votre boite mail.</p></div>";
+            return false;
+        }
+        
         $passwordBDD = $response[0]['mdpInter'];
         $passwordForm = $_POST['mdpInter'];
-        if ($passwordBDD == $passwordForm) {
-            return true;
-        } else {
-            echo "<div class='error'><p>Erreur de connexion</p></div>";
+        
+        if ($passwordBDD != $passwordForm) {
+            echo "<div class='error'><p>Erreur de connexion : mot de passe incorrect.</p></div>";
+            return false;
         }
+
+        $_SESSION["logged"] = true;
+        $_SESSION["login"] = $login;
+        $_SESSION["password"] = $passwordBDD;
+        return true;
     }
 }
 ?>
