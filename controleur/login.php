@@ -5,7 +5,7 @@ require(VUE . "/debut.php");
 
 if (isset($_SESSION["logged"])){
     if ($_SESSION["logged"] == true){
-        header("Location: ./../index.php");
+        header("Location: " . ROOT_URL);
     }
 } else {
     include(VUE . "/login.php");
