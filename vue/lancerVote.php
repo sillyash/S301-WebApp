@@ -4,7 +4,7 @@
 </div>
 
 <!-- TODO fix form action -->
-<form class="bg-white rounded-md p-4 flex items-center w-1/2 mt-4" action="<?php echo ROOT_URL.'/controleur/modifRole.php'?>">
+<form class="bg-white rounded-md p-4 flex items-center w-1/2 mt-4" action="<?php echo ROOT_URL.'controleur/modifRole.php'?>">
     <div class="flex">
         <div class="mr-4">
             <label for="pourContre">

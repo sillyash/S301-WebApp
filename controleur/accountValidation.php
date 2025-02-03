@@ -7,12 +7,12 @@ $login = handleHash();
 $success = updateAccountStatus($login);
 
 if ($success) {
-    $url = ROOT_URL . "/index.php";
+    $url = ROOT_URL . "index.php";
     echo "<div class='success'><p>Account validated successfully, $login! ";
     echo "You are being redirected to the login page...</p>";
     echo "<p>Click <a href='$url'>here</a> to go to the login page if the redirect fails.</p></div>";
     sleep(2);
-    header("Location: " . ROOT_URL . "/index.php");
+    header("Location: " . ROOT_URL . "index.php");
 } else {
     echo "<div class='error'><p>Error: Account validation failed.</p></div>";
 }

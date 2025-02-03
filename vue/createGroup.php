@@ -2,7 +2,7 @@
 <div class="pageTitleBar">
     Créer un Groupe
 </div>
-<form class="flex flex-col justify-space-between align-center w-200" method="post" action="<?php echo ROOT_URL.'/controleur/createGroup.php'; ?>">
+<form class="flex flex-col justify-space-between align-center w-200" method="post" action="<?php echo ROOT_URL.'controleur/createGroup.php'; ?>">
     <div class="formRow">
         <label class="flex-1" for="nomGroupe">Nom*</label>
         <input class="flex-2" type="text" name="nomGroupe" required>

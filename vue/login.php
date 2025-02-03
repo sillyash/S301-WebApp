@@ -1,8 +1,8 @@
 <div class="flex justify-space-between align-center">
-    <img class="flex-start size-72 mt-4" src="<?php echo ROOT_URL . 'assets/favicon.svg'; ?>" alt="logo">
+    <img class="flex-start size-72 mt-4" src="<?php echo ROOT_URL.'assets/favicon.svg'; ?>" alt="logo">
     
-    <form action="<?php echo ROOT_URL . '/controleur/login.php'; ?>" method="POST" class="flex flex-col mx-8 my-4 w-200 cursor-pointer">
-        <a href="<?php echo ROOT_URL . '/controleur/createAccount.php'; ?>">
+    <form action="<?php echo ROOT_URL.'controleur/login.php'; ?>" method="POST" class="flex flex-col mx-8 my-4 w-200 cursor-pointer">
+        <a href="<?php echo ROOT_URL.'controleur/createAccount.php'; ?>">
             <button class="w-full" type="button">
                 Créer un Compte!
             </button>

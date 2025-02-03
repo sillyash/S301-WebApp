@@ -6,18 +6,18 @@
 	<title>DemoCité</title>
 	<link
 		rel="stylesheet"
-		href="<?php echo ROOT_URL.'/css/app.css'; ?>"
+		href="<?php echo ROOT_URL.'css/app.css'; ?>"
 	/>
 	<link
 		rel="icon"
 		type="image/x-icon"
-		href="<?php echo ROOT_URL.'/assets/favicon.svg'; ?>"
+		href="<?php echo ROOT_URL.'assets/favicon.svg'; ?>"
 	/>
 </head>
 <body>
 	<header class="flex align-center bg-white shadow-md h-(--height-header)">
-		<a class="flex justify-center items-center size-(--height-header)" href="<?php echo ROOT_URL.'/index.php' ?>">
-			<img class="block size-[calc(var(--height-header)_-_20px)] mx-auto" src="<?php echo ROOT_URL.'/assets/favicon.svg'; ?>" alt="logo"/>
+		<a class="flex justify-center items-center size-(--height-header)" href="<?php echo ROOT_URL.'index.php' ?>">
+			<img class="block size-[calc(var(--height-header)_-_20px)] mx-auto" src="<?php echo ROOT_URL.'assets/favicon.svg'; ?>" alt="logo"/>
 		</a>
 		<?php
 		if (isset($_SESSION["logged"])){

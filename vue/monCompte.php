@@ -39,7 +39,7 @@
     <a>
         <button class="mb-3">Supprimer mon Compte</button>
     </a>
-    <a href="<?php echo ROOT_URL.'/controleur/logout.php'?>">
+    <a href="<?php echo ROOT_URL.'controleur/logout.php'?>">
         <button class="mb-3">Déconnexion</button>
     </a>
 </div>
