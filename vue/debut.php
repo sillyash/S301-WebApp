@@ -16,7 +16,7 @@
 </head>
 <body>
 	<header class="flex align-center bg-white shadow-md h-(--height-header)">
-		<a class="flex justify-center items-center size-(--height-header)" href="<?php echo ROOT_URL.'index.php' ?>">
+		<a class="flex justify-center items-center size-(--height-header)" href="<?php echo ROOT_URL ?>">
 			<img class="block size-[calc(var(--height-header)_-_20px)] mx-auto" src="<?php echo ROOT_URL.'assets/favicon.svg'; ?>" alt="logo"/>
 		</a>
 		<?php
