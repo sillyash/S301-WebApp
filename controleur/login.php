@@ -71,7 +71,7 @@ function handleForm() : bool {
         $compteValide = $response[0]['compteValide'];
         
         if (!$compteValide) {
-            echo "<div class='error'><p>Erreur de connexion : le compte n'est pas validé.";
+            echo "<div class='error'><p>Erreur de connexion : le compte n'est pas validé. ";
             echo "Veuillez verifier votre boite mail.</p></div>";
             return false;
         }
