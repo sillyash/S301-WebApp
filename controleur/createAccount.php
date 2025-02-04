@@ -8,14 +8,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($success) {
         sendVerificationEmail($_POST["loginInter"], $_POST["emailInter"]);
         require(VUE . "/login.php");
+        echo "<div class='success'><p>Account created successfully! ";
+        echo "Please validate your email to activate your account.</p></div>";
     } else {
+        require(VUE . "/createAccount.php");
         echo "<div class='error'><p>Unknown error: Account creation failed.</p></div>";
     }
 } else {
     require(VUE . "/createAccount.php");
 }
 
-require_once VUE . '/fin.php';
+require(VUE . '/fin.php');
 
 function handleForm() : bool {
     try {
@@ -44,8 +47,6 @@ function handleForm() : bool {
         $httpCode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
 
         if ($httpCode >= 200 && $httpCode < 300) {
-            require(VUE . "/login.php");
-            echo "<div class='success'><p>Account created successfully! Please validate your email to activate your account.</p></div>";
             return true;
         } else {
             // Handle API errors
@@ -68,7 +69,8 @@ function handleForm() : bool {
 }
 
 function sendVerificationEmail(string $login, string $email) : bool {
-    $hash = openssl_encrypt($login, OPENSSL_ALGO, OPENSSL_PASS);
+    $iv = openssl_random_pseudo_bytes(openssl_cipher_iv_length(OPENSSL_ALGO));
+    $hash = openssl_encrypt($login, OPENSSL_ALGO, OPENSSL_PASS, 0, $iv);
     $url = ROOT_URL . "controleur/accountValidation.php?hash=$hash";
     $data = array(
         "to" => [$email],
