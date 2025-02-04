@@ -18,7 +18,7 @@ require(VUE . "/fin.php");
 function getUtilisateur() : array {
     try {
         $handle = curl_init();
-        $url = API_URL . "view/Internaute?loginInter=" . $_SESSION["login"];
+        $url = API_URL . "Internaute?loginInter=" . $_SESSION["login"];
         curl_setopt($handle, CURLOPT_URL, $url);
         curl_setopt($handle, CURLOPT_CUSTOMREQUEST, "GET");
         curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
