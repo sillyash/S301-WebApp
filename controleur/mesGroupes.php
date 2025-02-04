@@ -4,10 +4,10 @@ include(VUE . "/debut.php");
 
 if (isset($_SESSION["logged"])) {
     if ($_SESSION["logged"] != true) {
-        header("Location: controleur/login.php");
+        header("Location: " . ROOT_URL);
     }
 } else {
-    header("Location: controleur/login.php");
+    header("Location: " . ROOT_URL);
 }
 
 $groupes = getGroupesUtilisateur();
