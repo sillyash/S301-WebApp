@@ -20,6 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 require(VUE . '/fin.php');
 
+/* --------------- Functions --------------- */
+
 function handleForm() : bool {
     try {
         Internaute::init();
