@@ -1,6 +1,7 @@
 <?php
 require_once("../config/params.php");
 include(VUE . "/debut.php");
+
 try {
     $login = $_SESSION["login"];
     $handle = curl_init();
@@ -30,5 +31,6 @@ session_destroy();
 if (ini_get("session.use_cookies")) {
     setcookie(session_name(), '', time() - 42000, '/');
 }
-exit;
+header("Location: login.php");
+include(VUE . "/fin.php");
 ?>
