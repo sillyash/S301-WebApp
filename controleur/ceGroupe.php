@@ -12,7 +12,7 @@ if (!isset($_GET['groupe'])) {
 
 $idGroupe = $_GET['groupe'];
 $groupe = apiGetGroupe($idGroupe)[0];
-$votes = apiGetVotes($idGroupe);
+$scrutins = apiGetScrutins($idGroupe);
 $propositions = apiGetPropositions($idGroupe);
 
 include(VUE . "/ceGroupe.php");
@@ -48,10 +48,10 @@ function apiGetGroupe($idGroupe) {
     return json_decode($response);
 }
 
-function apiGetVotes($idGroupe) {
+function apiGetScrutins($idGroupe) {
     try {
         $handle = curl_init();
-        $url = API_URL . "view/VotesGroupe?idGroupe=$idGroupe";
+        $url = API_URL . "view/ScrutinsGroupe?idGroupe=$idGroupe";
         curl_setopt($handle, CURLOPT_URL, $url);
         curl_setopt($handle, CURLOPT_CUSTOMREQUEST, "GET");
         curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
