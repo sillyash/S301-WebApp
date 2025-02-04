@@ -1,6 +1,8 @@
-<a class="flex w-full align-middle justify-center" href="<?php echo ROOT_URL.'controleur/voirMembres.php'?>">
-    <button class="w-full m-4">Voir membres</button>
-</a>
+
+<div class="flex items-center justify-center w-full">
+    <a class="flex-1 align-middle justify-center" href="<?php echo ROOT_URL.'controleur/voirMembres.php'?>">
+        <button class="w-full m-4">Voir membres</button>
+    </a>
 
 <?php
 
@@ -17,6 +19,9 @@ $desc = $groupe['descGroupe'];
 $nom = $groupe['nomGroupe'];
 $color = $groupe['couleurGroupe'];
 $contrastColor = getContrastColor($color);
+
+echo "<p class='flex-1 align-middle justify-center rounded-md'";
+echo "style='color:$color;background-color:$color;'>Votre role : $role</p><div>";
 
 echo "<div class='flex items-center justify-around w-full p-5 my-5'>";
 echo "<img src='$image' alt='groupe' class='mx-20 rounded-full w-30 h-30 object-contain'>";
