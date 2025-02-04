@@ -4,7 +4,7 @@ $titre = $proposition['titreProposition'];
 $desc = $proposition['descProposition'];
 $theme = $proposition['nomTheme'];
 $popularity = $proposition['popularite'];
-$groupe = $proposition['groupe'];
+$groupe = $proposition['nomGroupe'];
 $cout = $proposition['cout'];
 
 echo "<div class='pageTitleBar'>$titre</div>";
