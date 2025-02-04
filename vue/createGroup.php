@@ -46,10 +46,10 @@
         }
     </script>
 
-    <div class="formRow">
+    <!--div class="formRow">
         <label class="flex-1" for="ppGroupe">Image</label>
         <input class="flex-2" type="file" name="ppGroupe" accept="image/*" onchange="validateFileSize(this)">
-    </div>
+    </div-->
 
     <script>
         function validateFileSize(input) {
