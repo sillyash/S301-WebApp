@@ -7,15 +7,15 @@
     --height-header: 70px;
     --height-footer: 100px;
 
-    --color-grey-300: #d3d6dbff;
-    --color-grey-400: #3a4750ff;
-    --color-grey-500: #303841ff;
+    --color-gray-300: #d3d6dbff;
+    --color-gray-500: #3a4750ff;
+    --color-gray-700: #303841ff;
     --color-red-500: #be3144ff;
     --color-blue-500: #3156beff;
     --color-orange-500: #ff6f61ff;
 
     --color-primary: var(--color-blue-500);
-    --color-accent: var(--color-grey-400);
+    --color-accent: var(--color-gray-700);
     
     --color-error: var(--color-red-500);
     --color-warning: rgb(221, 178, 5);
@@ -104,7 +104,7 @@ a:hover {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    background-color: var(--color-grey-500);
+    background-color: var(--color-gray-700);
     color: white;
     width: 100%;
     border-radius: 0.375rem;
