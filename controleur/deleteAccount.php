@@ -18,12 +18,16 @@ try {
             $response = json_decode($response, true);
             $sqlError = $response['error'];
             echo "<div class='error'><p>Error: $sqlError</p></div>";
+            include(VUE . "/fin.php");
+            exit();
         }
     }
     return json_decode($response, true);
 } catch (Throwable $e) {
     echo "<div class='error'>";
     echo "<p>Error executing GET request : " . $e->getMessage() . "<p></div>";
+    include(VUE . "/fin.php");
+    exit();
 }
 
 $_SESSION = [];
@@ -31,6 +35,7 @@ session_destroy();
 if (ini_get("session.use_cookies")) {
     setcookie(session_name(), '', time() - 42000, '/');
 }
+
 header("Location: login.php");
-include(VUE . "/fin.php");
+
 ?>
