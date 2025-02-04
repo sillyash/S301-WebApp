@@ -9,7 +9,7 @@
 <?php
 foreach ($userData as $data) {
     $login = $data["loginInter"];
-    $mdp = $data["idGroupe"];
+    $mdp = $data["mdpInter"];
     $email = $data["emailInter"];
     $nom = $data["nomInter"];
     $prenom = $data["prenomInter"];
