@@ -696,6 +696,9 @@
   .bg-white {
     background-color: var(--color-white);
   }
+  .object-contain {
+    object-fit: contain;
+  }
   .p-1 {
     padding: calc(var(--spacing) * 1);
   }
@@ -732,11 +735,18 @@
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
   }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
   .\!text-blue-500 {
     color: var(--color-blue-500) !important;
   }
   .\!text-red-500 {
     color: var(--color-red-500) !important;
+  }
+  .text-blue-500 {
+    color: var(--color-blue-500);
   }
   .text-white {
     color: var(--color-white);
@@ -878,6 +888,10 @@ a:hover {
   syntax: "*";
   inherits: false;
   initial-value: 0;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
 }
 @property --tw-shadow {
   syntax: "*";

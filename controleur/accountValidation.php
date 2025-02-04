@@ -8,12 +8,11 @@ $success = updateAccountStatus($login);
 
 if ($success) {
     $url = ROOT_URL;
-    echo "<div class='success'><p>Account validated successfully, $login! ";
-    echo "You are being redirected to the login page...</p>";
-    echo "<p>Click <a href='$url'>here</a> to go to the login page if the redirect fails.</p></div>";
-    sleep(2);
-    header("Location: " . ROOT_URL);
+    echo "<div class='flex flex-col success'><p>Account validated successfully, $login!</p>";
+    echo "<p>Click <a class='font-bold text-blue-500' href='$url'>";
+    echo "here</a> to go to the login page.</p></div>";
 } else {
+    
     echo "<div class='error'><p>Error: Account validation failed.</p></div>";
 }
 
