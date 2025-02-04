@@ -1,8 +1,8 @@
 <?php
 
 $titre = $proposition['titreProposition'];
-$desc = $proposition['descriptionProposition'];
-$theme = $proposition['theme'];
+$desc = $proposition['descProposition'];
+$theme = $proposition['nomTheme'];
 $popularity = $proposition['popularite'];
 $groupe = $proposition['groupe'];
 $cout = $proposition['cout'];
