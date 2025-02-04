@@ -6,8 +6,7 @@ require(VUE . "/debut.php");
 $createGroup = isset($_GET["createGroup"]) ? true : false;
 
 if (!$createGroup) {
-    include(VUE . "/accueil.php");
-    include(VUE . "/fin.php");
+    header("Location: " . ROOT_URL);
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
