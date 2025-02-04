@@ -19,7 +19,7 @@ foreach ($groupes as $groupe) {
 ?>
 
 </div>
-<a href= "<?php echo ROOT_URL.'controleur/createGroup.php?createGroup=true' ?>">
+<a href= "<?php echo ROOT_URL.'controleur/createGroup.php' ?>">
     <button class="w-100" type="button">
         Créer un Groupe
     </button>
