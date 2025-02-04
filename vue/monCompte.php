@@ -25,8 +25,7 @@ foreach ($userData as $data) {
 }
 ?>
 
-    <!-- TODO: change action of each button -->
-    <a>
+    <a href="<?php echo ROOT_URL.'controleur/deleteAccount.php'?>">
         <button class="mb-3 w-full">Supprimer mon Compte</button>
     </a>
     <a href="<?php echo ROOT_URL.'controleur/logout.php'?>">
