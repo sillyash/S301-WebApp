@@ -47,8 +47,8 @@
     </script>
 
     <div class="formRow">
-        <label class="flex-1" for="imgGroupe">Image</label>
-        <input class="flex-2" type="file" name="imgGroupe" accept="image/*" onchange="validateFileSize(this)">
+        <label class="flex-1" for="ppGroupe">Image</label>
+        <input class="flex-2" type="file" name="ppGroupe" accept="image/*" onchange="validateFileSize(this)">
     </div>
 
     <script>
