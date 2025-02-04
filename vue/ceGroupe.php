@@ -1,4 +1,4 @@
-<a class="flex w-full align-middle justify-center" href="">
+<a class="flex w-full align-middle justify-center" href="<?php echo ROOT_URL.'controleur/voirMembres.php'?>">
     <button class="w-full m-4">Voir membres</button>
 </a>
 
