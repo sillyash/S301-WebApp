@@ -30,7 +30,7 @@ try {
             exit();
         }
     }
-    return json_decode($response, true);
+    echo "<div class='success'><p>". json_decode($response, true) ."</p></div>";
 } catch (Throwable $e) {
     echo "<div class='error'>";
     echo "<p>Error executing GET request : " . $e->getMessage() . "<p></div>";
@@ -44,6 +44,9 @@ if (ini_get("session.use_cookies")) {
     setcookie(session_name(), '', time() - 42000, '/');
 }
 
+echo "<p class='my-5'>Suppression du compte reussie.";
+echo "Redirection vers la page d'accueil...</p>";
+sleep(3);
 header("Location: login.php");
 
 ?>
