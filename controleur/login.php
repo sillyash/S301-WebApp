@@ -14,7 +14,7 @@ if (isset($_SESSION["logged"])){
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $success = handleForm();
     if ($success) {
-        header("Location: " . $_SERVER['PHP_SELF']);
+        header("Location: " . ROOT_URL);
     }
 }
 
