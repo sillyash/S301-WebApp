@@ -35,7 +35,7 @@ function getGroupesUtilisateur() : array {
         return json_decode($response, true);
     } catch (Throwable $e) {
         echo "<div class='error'>";
-        echo "<p>Error executing GET request : " . $e->getMessage() . "<p>";
+        echo "<p>Error executing GET request : " . $e->getMessage() . "<p></div>";
     }
 }
 ?>
