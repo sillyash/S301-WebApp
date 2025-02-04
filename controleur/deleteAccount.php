@@ -1,5 +1,6 @@
 <?php
-
+require_once("../config/params.php");
+include(VUE . "/debut.php");
 try {
     $login = $_SESSION["login"];
     $handle = curl_init();
