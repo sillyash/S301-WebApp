@@ -26,6 +26,9 @@ function handleHash() : string {
     if (isset($_GET["hash"])) {
         $hash = $_GET["hash"];
         $login = openssl_decrypt($hash, OPENSSL_ALGO, OPENSSL_PASS);
+        if (!$login) {
+            echo "<div class='error'><p>Error: Failed to decrypt the hash : '$hash'</p></div>";
+        }
         return $login;
     } else {
         echo "<div class='error'><p>Error: The URL isn't correct. You are missing a hash.</p></div>";
@@ -33,8 +36,11 @@ function handleHash() : string {
 }
 
 function updateAccountStatus(string $login) : bool {
-    $internaute = new Internaute(["loginInter" => $login], CONSTRUCT_GET);
-    $internaute->set("compteValide", true);
+    $data = array(
+        "loginInter" => $login,
+        "compteValide" => 1
+    );
+    $internaute = new Internaute($data, CONSTRUCT_PUT);
     $data_json = json_encode($internaute);
 
     try {

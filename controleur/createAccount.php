@@ -69,8 +69,7 @@ function handleForm() : bool {
 }
 
 function sendVerificationEmail(string $login, string $email) : bool {
-    $iv = openssl_random_pseudo_bytes(openssl_cipher_iv_length(OPENSSL_ALGO));
-    $hash = openssl_encrypt($login, OPENSSL_ALGO, OPENSSL_PASS, 0, $iv);
+    $hash = openssl_encrypt($login, OPENSSL_ALGO, OPENSSL_PASS);
     $url = ROOT_URL . "controleur/accountValidation.php?hash=$hash";
     $data = array(
         "to" => [$email],
