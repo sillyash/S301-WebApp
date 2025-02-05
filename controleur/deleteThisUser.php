@@ -5,8 +5,9 @@ include(VUE . "/debut.php");
 try {
     $login = $_GET["idMembre"];
     $role = $_GET["idRole"];
+    $idGroupe = $_GET["idGroupe"];
     $handle = curl_init();
-    $url = API_URL . "Fait_partie_de?loginInter=$login?idRole=$role";
+    $url = API_URL . "Fait_partie_de?loginInter=$login&idRole=$role&idGroupe=$idGroupe";
     curl_setopt($handle, CURLOPT_URL, $url);
     curl_setopt($handle, CURLOPT_CUSTOMREQUEST, "DELETE");
     curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
