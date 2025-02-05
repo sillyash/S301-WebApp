@@ -3,8 +3,8 @@ require_once("../config/params.php");
 require(VUE . "/debut.php");
 
 if (!isset($_GET['idProposition'])) {
-    echo "<div class='error'><p>Groupe non spécifié</p>";
-    echo "<p>Veuillez revenir a la page d'accueil.</p></div>";
+    echo "<div class='error'><p>Proposition non spécifiée</p>";
+    echo "<p>Veuillez revenir a la page précedente.</p></div>";
     require(VUE . "/fin.php");
     exit();
 }
