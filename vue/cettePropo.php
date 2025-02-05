@@ -6,6 +6,7 @@ $theme = $proposition['nomTheme'];
 $popularity = $proposition['popularite'];
 $groupe = $proposition['nomGroupe'];
 $cout = $proposition['cout'];
+$budget = $proposition['limiteBudgetGlobal'];
 $resultat = $proposition['resultatScrutin'];
 $idScrutin = $proposition['idScrutin'];
 
@@ -40,6 +41,9 @@ echo "
             <p class='flex-1 mx-5 font-bold mr-2'>Cout</p>
             <p class='flex-3 mx-5'>$cout</p>
         </div>
+        <div class='flex flex-row mb-4 text-gray-700'>
+            <p class='flex-1 mx-5 font-bold mr-2'>Limite Budget</p>
+            <p class='flex-3 mx-5'>$budget</p>
         <div class='flex flex-row mb-4 text-gray-700'>
             <p class='flex-1 mx-5 font-bold mr-2'>Resultat</p>
             <p class='flex-3 mx-5'>$resultat</p>
