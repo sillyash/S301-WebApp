@@ -14,7 +14,7 @@ require(VUE . "/fin.php");
 
 function handleForm() : bool {
     try {
-        $idGroupe = isset($_GET["idGroupe"]);
+        $idGroupe = $_GET["idGroupe"];
         $titreBudget = isset($_POST["titreBudget"]) ? trim($_POST["titreBudget"]) : null;
         $limiteBudgetGlobal = isset($_POST["limiteBudgetGlobal"]) ? $_POST["limiteBudgetGlobal"] : null;
 
