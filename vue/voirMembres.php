@@ -6,7 +6,7 @@
     <ul class="w-full">
         <?php 
         foreach ($membres as $membre): 
-            $login = $membre['login'];
+            $login = $membre['loginInter'];
             $role = $membre['role'];
             $idMembre = $membre['id'];
             echo "<li class='flex items-center justify-between w-full p-2 m-2'>";
