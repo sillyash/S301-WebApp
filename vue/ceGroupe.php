@@ -70,6 +70,11 @@ if ($isAdmin) {
     echo "<a class='p-2 m-2 w-100' ";
     echo "href='" . ROOT_URL . "controleur/createBudget.php?idGroupe=$idGroupe'>";
     echo "<button class='w-full'>Créer un budget</button></a></div>";
+
+    echo "<div class='flex w-full justify-center align-center'>";
+    echo "<a class='p-2 m-2 w-100' ";
+    echo "href='" . ROOT_URL . "controleur/createTheme.php?idGroupe=$idGroupe'>";
+    echo "<button class='w-full'>Ajouter des roles</button></a></div>";
 }
 
 ?>
