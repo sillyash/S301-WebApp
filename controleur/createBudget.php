@@ -53,7 +53,11 @@ function handleForm() : bool {
             $sqlError = isset($response["error"]) ? $response["error"] : $response;
 
             require(VUE . "/createBudget.php");
-            echo "<div class='error'><p>Error: $sqlError</p></div>";
+            if (strpos($error, "Duplicate entry") !== false) {
+                echo "<div class='error'><p>Un budget avec ce titre existe déjà</p></div>";
+            } else {
+                echo "<div class='error'><p>Error: $sqlError</p></div>";
+            }
             return false;
         }
     } catch (Exception $e) {
