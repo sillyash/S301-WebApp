@@ -644,6 +644,9 @@
   .h-\(--height-header\) {
     height: var(--height-header);
   }
+  .h-15 {
+    height: calc(var(--spacing) * 15);
+  }
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
