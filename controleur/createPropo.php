@@ -25,6 +25,7 @@ function handleForm() : bool {
     try {
         $idGroupe = $_GET["idGroupe"];
         $_POST["idGroupe"] = $idGroupe;
+        $_POST["loginInter"] = $_SESSION["login"];
         $postData = json_encode(array("in" => $_POST));
 
         $handle = curl_init();
