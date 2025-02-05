@@ -75,6 +75,11 @@ if ($isAdmin) {
     echo "<a class='p-2 m-2 w-100' ";
     echo "href='" . ROOT_URL . "controleur/createTheme.php?idGroupe=$idGroupe'>";
     echo "<button class='w-full'>Ajouter des thèmes</button></a></div>";
+
+    echo "<div class='flex justify-center w-full align-center'>";
+    echo "<a class='p-2 m-2 w-100' ";
+    echo "href='" . ROOT_URL . "controleur/inviterMembre.php?idGroupe=$idGroupe'>";
+    echo "<button class='w-full'>Inviter des membres</button></a></div>";
 }
 
 ?>
