@@ -5,7 +5,7 @@
 <div>
     <ul class="w-full">
         <?php
-        $idGroupe = $GET_["idGroupe"];
+        $idGroupe = $_GET["idGroupe"];
         foreach ($membres as $membre): 
             $login = $membre['loginInter'];
             $role = $membre['role'];
