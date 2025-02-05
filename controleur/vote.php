@@ -36,7 +36,7 @@ try {
         $httpCode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
         if ($httpCode > 299 || $httpCode < 200) {
             $response = json_decode($response, true);
-            $sqlError = $postData;
+            $sqlError = isset($response["error"]) ? $response["error"] : $response;
             echo "<div class='error'><p>Error: $sqlError</p></div>";
             include(VUE . "/fin.php");
             exit();
@@ -46,7 +46,6 @@ try {
 } catch (Throwable $e) {
     echo "<div class='error'>";
     echo "<p>Error executing GET request : " . $e->getMessage() . "<p></div>";
-    var_dump($postData);
     include(VUE . "/fin.php");
     exit();
 }
