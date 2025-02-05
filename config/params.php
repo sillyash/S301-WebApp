@@ -1,6 +1,6 @@
 <?php
 // development flag
-if (!defined('DEV')) define('DEV', true);
+if (!defined('DEV')) define('DEV', false);
 
 // error reporting
 if (DEV) {
