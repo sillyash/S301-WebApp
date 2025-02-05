@@ -33,8 +33,8 @@ function handleForm() : bool {
         $postData = json_encode([
             "descProposition" => $descProposition,
             "titreProposition" => $titreProposition,
-            "dateProp " => $dateProp,
-            "coutProp " => $coutProp,
+            "dateProp" => $dateProp,
+            "coutProp" => $coutProp,
             "popularite" => 0
         ]);
     } catch (Exception $e) {
