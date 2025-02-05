@@ -13,9 +13,9 @@ if (!isset($_GET["idGroupe"])) {
 $idGroupe = $_GET["idGroupe"];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    var_dump($_POST);
     $success = handleForm();
     if ($success) header("Location: " . ROOT_URL);
+    if (!$success) var_dump($_POST);
 } else {
     require(VUE . "/createTheme.php");
 }
@@ -26,10 +26,12 @@ require(VUE . '/fin.php');
 
 function handleForm() : bool {
     try {
-        foreach ($_POST["themesGroupe"] as $theme) {
-            if (!addThemeToGroup($theme)) {
-                throw new Exception("Error adding theme to group");
-            }
+        $themes = $_POST["themesGroupe"];
+        $budgets = $_POST["budgetsGroupe"];
+        for ($i = 0; $i < count($themes); $i++) {
+            $theme = $themes[$i];
+            $budget = $budgets[$i];
+            if (!addThemeToGroup($theme, $budget)) return false;
         }
     } catch (Exception $e) {
         echo "<div class='error'><p>Error: " . $e->getMessage(). "</p></div>";
@@ -38,10 +40,13 @@ function handleForm() : bool {
     return true;
 } 
 
-function addThemeToGroup(string $theme) : bool {
+function addThemeToGroup(string $theme, int $budget) : bool {
     try {
         $url = API_URL . "Theme";
-        $data = array("nomTheme" => $theme);
+        $data = array(
+            "nomTheme" => $theme,
+            "budgetTheme" => $budget
+        );
         $data_json = json_encode($data);
 
         $handle = curl_init();
