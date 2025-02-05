@@ -13,8 +13,8 @@ $idScrutin = $proposition['idScrutin'];
 $isAdmin = ($role == "Admin");
 $voteDeclenche = ($resultat == "En cours");
 
-$hrefVotePour = ROOT_URL . "/controleur/vote?valeurVote=1&idScrutin=$idScrutin";
-$hrefVoteContre = ROOT_URL . "/controleur/vote?valeurVote=-1&idScrutin=$idScrutin";
+$hrefVotePour = ROOT_URL . "/controleur/vote.php?valeurVote=1&idScrutin=$idScrutin";
+$hrefVoteContre = ROOT_URL . "/controleur/vote.php?valeurVote=-1&idScrutin=$idScrutin";
 $hrefDeclencheVote = ROOT_URL . "/controleur/declencheVote?idProposition=$idProp";
 
 echo "
