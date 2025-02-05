@@ -8,10 +8,14 @@ $popularity = $proposition['popularite'];
 $groupe = $proposition['nomGroupe'];
 $cout = $proposition['cout'];
 $resultat = $proposition['resultatScrutin'];
+$idScrutin = $proposition['idScrutin'];
 
+$isAdmin = ($role == "Admin");
 $voteDeclenche = ($resultat == "En cours");
-$hrefVotePour = ROOT_URL . "/controleur/vote?valeurVote=1&idProposition=$idProp";
-$hrefVoteContre = ROOT_URL . "/controleur/vote?valeurVote=-1&idProposition=$idProp";
+
+$hrefVotePour = ROOT_URL . "/controleur/vote?valeurVote=1&idScrutin=$idScrutin";
+$hrefVoteContre = ROOT_URL . "/controleur/vote?valeurVote=-1&idScrutin=$idScrutin";
+$hrefDeclencheVote = ROOT_URL . "/controleur/declencheVote?idProposition=$idProp";
 
 echo "
 <div class='container mx-auto p-4'>
@@ -61,7 +65,7 @@ if ($voteDeclenche) {
     ";
 } elseif ($isAdmin) {
     echo "
-    <a class='flex-1 mt-6 mx-10 w-full' href='$hrefVotePour'>
+    <a class='flex-1 mt-6 mx-10 w-full' href='$hrefDeclencheVote'>
         <button class='w-full bg-blue-500! hover:bg-blue-700! text-white font-bold py-2 px-4 rounded'>
             Declencher vote
         </button>

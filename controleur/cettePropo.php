@@ -13,7 +13,6 @@ $idProposition = $_GET['idProposition'];
 $proposition = apiGetProposition($idProposition)[0];
 
 $role = apiGetRole($_SESSION['login'], $proposition['idGroupe']);
-$isAdmin = ($role == "admin");
 
 include(VUE . "/cettePropo.php");
 require(VUE . "/fin.php");
