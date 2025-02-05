@@ -13,9 +13,9 @@ $idScrutin = $proposition['idScrutin'];
 $isAdmin = ($role == "Admin");
 $voteDeclenche = ($resultat == "En cours");
 
-$hrefVotePour = ROOT_URL . "/controleur/vote.php?valeurVote=1&idScrutin=$idScrutin";
-$hrefVoteContre = ROOT_URL . "/controleur/vote.php?valeurVote=-1&idScrutin=$idScrutin";
-$hrefDeclencheVote = ROOT_URL . "/controleur/declencheVote?idProposition=$idProp";
+$hrefVotePour = ROOT_URL . "/controleur/vote.php?valeurVote=1&idScrutin=$idScrutin?idProposition=$idProp";
+$hrefVoteContre = ROOT_URL . "/controleur/vote.php?valeurVote=-1&idScrutin=$idScrutin?idProposition=$idProp";
+$hrefDeclencheVote = ROOT_URL . "/controleur/declencheVote?idProposition=$idProp?idScrutin=$idScrutin?idProposition=$idProp";
 
 echo "
 <div class='container mx-auto p-4'>
