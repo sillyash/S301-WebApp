@@ -64,11 +64,6 @@ function handleForm() : bool {
             $sqlError = isset($response["error"]) ? $response["error"] : $response;
 
             require(VUE . "/createPropo.php");
-            if (strpos($error, "Duplicate entry") !== false) {
-                echo "<div class='error'><p>Une proposition avec ce titre existe déjà</p></div>";
-            } else {
-                echo "<div class='error'><p>Error: $sqlError</p></div>";
-            }
             return false;
         }
     } catch (Exception $e) {
