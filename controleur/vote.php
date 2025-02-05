@@ -18,10 +18,11 @@ try {
     $url = API_URL . "Vote";
 
     $postData = json_encode([
+        "loginInter" => $login,
         "idScrutin" => $idScrutin,
         "valeurVote" => $valeurVote
     ]);
-
+    var_dump($postData);
     curl_setopt($handle, CURLOPT_URL, $url);
     curl_setopt($handle, CURLOPT_POST, true);
     curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
@@ -37,6 +38,7 @@ try {
             $response = json_decode($response, true);
             $sqlError = isset($response["error"]) ? $response["error"] : $response;
             echo "<div class='error'><p>Error: $sqlError</p></div>";
+            var_dump($postData);
             include(VUE . "/fin.php");
             exit();
         }
@@ -49,6 +51,7 @@ try {
     include(VUE . "/fin.php");
     exit();
 }
+var_dump($postData);
 include(VUE . "/cettePropo.php");
 require(VUE . "/fin.php");
 
