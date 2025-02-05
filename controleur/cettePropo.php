@@ -9,8 +9,8 @@ if (!isset($_GET['idProposition'])) {
     exit();
 }
 
-$idProposition = $_GET['idProposition'];
-$proposition = apiGetProposition($idProposition)[0];
+$idProp = $_GET['idProposition'];
+$proposition = apiGetProposition($idProp)[0];
 
 $role = apiGetRole($_SESSION['login'], $proposition['idGroupe']);
 

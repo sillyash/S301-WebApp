@@ -1,6 +1,5 @@
 <?php
 
-$idProp = $proposition['idProposition'];
 $titre = $proposition['titreProposition'];
 $desc = $proposition['descProposition'];
 $theme = $proposition['nomTheme'];
