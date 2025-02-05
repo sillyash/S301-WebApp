@@ -5,9 +5,12 @@
 
 <div id="themesContainer">
         <div class="formRow themeRow">
-            <label class="flex-1" for="themesGroupe[]">Theme*</label>
+            <label class="flex-1 my-2" for="themesGroupe[]">Nom*</label>
             <input class="flex-2" type="text" name="themesGroupe[]" required>
-            <button type="button" class="removeThemeBtn flex-1 mx-5" onclick="removeTheme(this)">Supprimer</button>
+            <br>
+            <label class="flex-1 my-2" for="budgetsGroupe[]">Budget*</label>
+            <input class="flex-2" type="number" name="budgetsGroupe[]" required>
+            <button type="button" class="flex-1 mx-5 removeThemeBtn" onclick="removeTheme(this)">Supprimer</button>
         </div>
     </div>
     <button type="button" id="addThemeBtn" class="w-200! my-5!" onclick="addTheme()">Ajouter un theme</button>
@@ -18,9 +21,12 @@
             const newFormRow = document.createElement('div');
             newFormRow.className = 'formRow themeRow';
             newFormRow.innerHTML = `
-            <label class="flex-1" for="themesGroupe[]">Theme*</label>
+            <label class="flex-1 my-2" for="themesGroupe[]">Nom*</label>
             <input class="flex-2" type="text" name="themesGroupe[]" required>
-            <button type="button" class="removeThemeBtn flex-1 mx-5" onclick="removeTheme(this)">Supprimer</button>
+            <br>
+            <label class="flex-1 my-2" for="budgetsGroupe[]">Budget*</label>
+            <input class="flex-2" type="number" name="budgetsGroupe[]" required>
+            <button type="button" class="flex-1 mx-5 removeThemeBtn" onclick="removeTheme(this)">Supprimer</button>
             `;
             container.appendChild(newFormRow);
         }
