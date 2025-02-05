@@ -67,19 +67,22 @@ echo "<button class='w-full'>Créer une proposition</button></a></div>";
 
 if ($isAdmin) {
     echo "<div class='flex justify-center w-full align-center'>";
-    echo "<a class='p-2 m-2 w-100' ";
+
+    echo "<div class='flex-1 w-1/3 mx-5'>";
+    echo "<a class='w-full p-2 m-2' ";
     echo "href='" . ROOT_URL . "controleur/createBudget.php?idGroupe=$idGroupe'>";
-    echo "<button class='w-full'>Créer un budget</button></a></div>";
+    echo "<button class='w-full bg-red-500'>Créer un budget</button></a></div>";
 
-    echo "<div class='flex justify-center w-full align-center'>";
-    echo "<a class='p-2 m-2 w-100' ";
+    echo "<div class='flex-1 w-1/3 mx-5'>";
+    echo "<a class='w-full p-2 m-2' ";
     echo "href='" . ROOT_URL . "controleur/createTheme.php?idGroupe=$idGroupe'>";
-    echo "<button class='w-full'>Ajouter des thèmes</button></a></div>";
+    echo "<button class='w-full bg-red-500'>Ajouter des thèmes</button></a></div>";
 
-    echo "<div class='flex justify-center w-full align-center'>";
-    echo "<a class='p-2 m-2 w-100' ";
+    echo "<div class='flex-1 w-1/3 mx-5'>";
+    echo "<a class='w-full p-2 m-2' ";
     echo "href='" . ROOT_URL . "controleur/inviterMembre.php?idGroupe=$idGroupe'>";
-    echo "<button class='w-full'>Inviter des membres</button></a></div>";
+    echo "<button class='w-full bg-red-500'>Inviter des membres</button></a></div>";
+    echo "</div>";
 }
 
 ?>
