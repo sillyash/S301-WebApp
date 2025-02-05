@@ -20,7 +20,7 @@ require_once VUE . '/fin.php';
 function apiGetBudgets($idGroupe) {
     try {
         $handle = curl_init();
-        $url = API_URL . "BudgetsGroupe?idGroupe=" . $idGroupe;
+        $url = API_URL . "view/BudgetsGroupe?idGroupe=" . $idGroupe;
         curl_setopt($handle, CURLOPT_URL, $url);
         curl_setopt($handle, CURLOPT_CUSTOMREQUEST, "GET");
         curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
