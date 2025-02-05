@@ -1,7 +1,7 @@
 <?php
 require_once("../config/params.php");
 include(VUE . "/debut.php");
-$idGroupe = $_GET["idGroupe"];
+
 try {
     $login = $_GET["idMembre"];
     $handle = curl_init();
@@ -32,7 +32,7 @@ try {
 
 echo "<p class='my-5'>Suppression du compte reussie.";
 echo "Redirection vers la page Membres...</p>";
-sleep(3);
+$idGroupe = $_GET["idGroupe"];
 header("Location: voirMembres.php?idGroupe=$idGroupe");
 
 ?>
