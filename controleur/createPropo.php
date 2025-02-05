@@ -34,7 +34,8 @@ function handleForm() : bool {
             "descProposition" => $descProposition,
             "titreProposition" => $titreProposition,
             "dateProp " => $dateProp,
-            "coutProp " => $coutProp
+            "coutProp " => $coutProp,
+            "popularite" => 0
         ]);
     } catch (Exception $e) {
         echo "Error: " . $e->getMessage();
