@@ -8,7 +8,7 @@
         $idGroupe = $_GET["idGroupe"];
         foreach ($membres as $membre): 
             $login = $membre['loginInter'];
-            $role = $membre['role'];
+            $role = apiGetRole($login, $idGroupe);
             echo "<li class='flex items-center justify-between w-full p-2 m-2'>";
             echo "$login : $role";
             echo "<a href='" . ROOT_URL . "controleur/modifierRole.php?idMembre=$login'>
