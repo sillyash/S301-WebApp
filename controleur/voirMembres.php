@@ -99,7 +99,7 @@ function apiGetRoleId($login, $idGroupe) {
 
     foreach ($roles as $role) {
         if ($role['idGroupe'] == $idGroupe) {
-            return $role['nomRole'];
+            return $role['idRole'];
         }
     }
     return null;
