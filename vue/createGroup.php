@@ -17,34 +17,6 @@
         <label class="flex-1" for="descGroupe">Description*</label>
         <input class="flex-2" type="text" name="descGroupe" required>
     </div>
-    
-    <div id="themesContainer">
-        <div class="formRow themeRow">
-            <label class="flex-1" for="themesGroupe[]">Theme*</label>
-            <input class="flex-2" type="text" name="themesGroupe[]" required>
-            <button type="button" class="removeThemeBtn flex-1 mx-5" onclick="removeTheme(this)">Supprimer</button>
-        </div>
-    </div>
-    <button type="button" id="addThemeBtn" class="w-200! my-5!" onclick="addTheme()">Ajouter un theme</button>
-    
-    <script>
-        function addTheme() {
-            const container = document.getElementById('themesContainer');
-            const newFormRow = document.createElement('div');
-            newFormRow.className = 'formRow themeRow';
-            newFormRow.innerHTML = `
-            <label class="flex-1" for="themesGroupe[]">Theme*</label>
-            <input class="flex-2" type="text" name="themesGroupe[]" required>
-            <button type="button" class="removeThemeBtn flex-1 mx-5" onclick="removeTheme(this)">Supprimer</button>
-            `;
-            container.appendChild(newFormRow);
-        }
-        
-        function removeTheme(button) {
-            const row = button.parentElement;
-            row.remove();
-        }
-    </script>
 
     <!--div class="formRow">
         <label class="flex-1" for="ppGroupe">Image</label>
