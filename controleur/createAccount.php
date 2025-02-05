@@ -53,7 +53,7 @@ function handleForm() : bool {
         } else {
             // Handle API errors
             $response = json_decode($response, true);
-            $sqlError = $response['error'];
+            $sqlError = isset($response["error"]) ? $response["error"] : $response;
 
             include(VUE . "/createAccount.php");
             if (Internaute::isSqlDuplicate($sqlError)) {

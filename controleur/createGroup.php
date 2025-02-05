@@ -46,7 +46,7 @@ function handleForm() : bool {
         } else {
             // Handle API errors
             $response = json_decode($response, true);
-            $sqlError = $sqlError = $response["error"];
+            $sqlError = isset($response["error"]) ? $response["error"] : $response;
 
             require(VUE . "/createGroup.php");
             echo "<div class='error'><p>Error: $sqlError</p></div>";
@@ -92,7 +92,7 @@ function addUserToGroup() : bool {
         } else {
             // Handle API errors
             $response = json_decode($response, true);
-            $sqlError = $response["error"];
+            $sqlError = isset($response["error"]) ? $response["error"] : $response;
 
             require(VUE . "/createGroup.php");
             echo "<div class='error'><p>Error: $sqlError</p></div>";

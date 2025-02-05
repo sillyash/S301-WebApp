@@ -28,7 +28,7 @@ function getGroupesUtilisateur() : array {
             $httpCode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
             if ($httpCode > 299 || $httpCode < 200) {
                 $response = json_decode($response, true);
-                $sqlError = $response['error'];
+                $sqlError = isset($response["error"]) ? $response["error"] : $response;
                 echo "<div class='error'><p>Error: $sqlError</p></div>";
             }
         }
