@@ -37,7 +37,11 @@ try {
             $response = json_decode($response, true);
             $sqlError = isset($response["error"]) ? $response["error"] : $response;
             
-            echo "<div class='error'><p>Error: $sqlError</p></div>";
+            if (strpos($error, "Duplicate entry") !== false) {
+                echo "<div class='error'><p>Vous avez déjà voté !</p></div>";
+            } else {
+                echo "<div class='error'><p>Error: $sqlError</p></div>";
+            }
             include(VUE . "/fin.php");
             exit();
         }
