@@ -5,7 +5,7 @@ require(VUE . "/debut.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $success = handleForm();
-    if ($success) header("Location: " . ROOT_URL);
+    if ($success) header("Location: " . ROOT_URL); // TODO change this prolly
 } else {
     require(VUE . "/createGroup.php");
 }
@@ -14,12 +14,7 @@ require(VUE . "/fin.php");
 
 function handleForm() : bool {
     try {
-
-        $postData = json_encode([
-            "loginInter" => $login,
-            "idScrutin" => $idScrutin,
-            "valeurVote" => $valeurVote
-        ]);
+        $idGroupe = isset($_GET["idGroupe"]); // idk wtf to do w this but it's gotta do smt
         Budget::init();
         $budget = new Budget($_POST, CONSTRUCT_POST);
         $data_json = json_encode($budget);

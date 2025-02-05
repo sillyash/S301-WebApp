@@ -908,6 +908,7 @@ a:hover {
 }
 .error {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   justify-items: center;
   color: white;
