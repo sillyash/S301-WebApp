@@ -665,14 +665,14 @@
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
+  .w-30 {
+    width: calc(var(--spacing) * 30);
+  }
   .w-100 {
     width: calc(var(--spacing) * 100);
   }
   .w-16 {
     width: calc(var(--spacing) * 16);
-  }
-  .w-30 {
-    width: calc(var(--spacing) * 30);
   }
   .w-200 {
     width: calc(var(--spacing) * 200);
@@ -794,9 +794,6 @@
   .text-right {
     text-align: right;
   }
-  .text-right\! {
-    text-align: right !important;
-  }
   .align-middle {
     vertical-align: middle;
   }
@@ -811,10 +808,6 @@
   .text-lg {
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
-  }
-  .text-sm {
-    font-size: var(--text-sm);
-    line-height: var(--tw-leading, var(--text-sm--line-height));
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);

@@ -15,6 +15,7 @@ $groupe = apiGetGroupe($idGroupe)[0];
 $scrutins = apiGetScrutins($idGroupe);
 $propositions = apiGetPropositions($idGroupe);
 $role = apiGetRole($_SESSION['login'], $idGroupe);
+$isAdmin = ($role == "Admin");
 
 include(VUE . "/ceGroupe.php");
 
