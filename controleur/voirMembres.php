@@ -2,7 +2,7 @@
 require_once("../config/params.php");
 require(VUE . "/debut.php");
 
-$idGroupe = $_GET["groupe"];
+$idGroupe = $_GET["idGroupe"];
 $membres = apiGetMembres($idGroupe);
 
 include(VUE . "/voirMembres.php");
