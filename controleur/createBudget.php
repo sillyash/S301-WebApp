@@ -5,7 +5,7 @@ require(VUE . "/debut.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $success = handleForm();
-    if ($success) header("Location: " . ROOT_URL); // TODO change this prolly
+    if ($success) require(VUE . "/ceGroup.php");
 } else {
     require(VUE . "/createGroup.php");
 }
