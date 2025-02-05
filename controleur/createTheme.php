@@ -28,10 +28,11 @@ function handleForm() : bool {
     try {
         $themes = $_POST["themesGroupe"];
         $budgets = $_POST["budgetsGroupe"];
+        $idGroupe = $_GET["idGroupe"];
         for ($i = 0; $i < count($themes); $i++) {
             $theme = $themes[$i];
             $budget = $budgets[$i];
-            if (!addThemeToGroup($theme, $budget)) return false;
+            if (!addThemeToGroup($theme, $budget, $idGroupe)) return false;
         }
     } catch (Exception $e) {
         echo "<div class='error'><p>Error: " . $e->getMessage(). "</p></div>";
@@ -40,12 +41,13 @@ function handleForm() : bool {
     return true;
 } 
 
-function addThemeToGroup(string $theme, int $budget) : bool {
+function addThemeToGroup(string $theme, int $budget, int $idGroupe) : bool {
     try {
         $url = API_URL . "Theme";
         $data = array(
             "nomTheme" => $theme,
-            "budgetTheme" => $budget
+            "budgetTheme" => $budget,
+            "idGroupe" => $idGroupe
         );
         $data_json = json_encode($data);
 
