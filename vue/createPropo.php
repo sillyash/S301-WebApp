@@ -19,21 +19,6 @@
     <input class="flex-2" type="number" name="coutProp" required>
 </div>
 
-<div class="formRow">
-    <label class="flex-1" for="idBudget">Budget*</label>
-    <select class="flex-2" name="idBudget" required>
-
-<?php
-
-foreach ($budgets as $budget) {
-    echo "<option value='" . $budget['idBudget'] . ">";
-    echo $budget['nomBudget'] . "</option>";
-}
-
-?>
-    </select>
-</div>
-
 <button type="submit">
     ➜
 </button>
