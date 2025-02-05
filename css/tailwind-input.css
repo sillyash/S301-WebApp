@@ -44,7 +44,9 @@
     vertical-align: middle;
 }
 
-.formRow > input {
+.formRow > input,
+.formRow > select,
+.formRow > textarea {
     height: 100%;
     padding: 0.5rem;
     background-color: var(--color-blue-500);
