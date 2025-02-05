@@ -9,8 +9,8 @@
     </div>
     
     <div class="formRow">
-        <label class="flex-1" for="budgetMax">Budget Max*</label>
-        <input class="flex-2" type="number" name="budgetMax" required>
+        <label class="flex-1" for="limiteBudgetGlobal">Budget Max*</label>
+        <input class="flex-2" type="number" name="limiteBudgetGlobal" required>
     </div>
     
     <button type="submit">
