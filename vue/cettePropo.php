@@ -44,6 +44,7 @@ echo "
         <div class='flex flex-row mb-4 text-gray-700'>
             <p class='flex-1 mx-5 font-bold mr-2'>Limite Budget</p>
             <p class='flex-3 mx-5'>$budget</p>
+        </div>
         <div class='flex flex-row mb-4 text-gray-700'>
             <p class='flex-1 mx-5 font-bold mr-2'>Resultat</p>
             <p class='flex-3 mx-5'>$resultat</p>
