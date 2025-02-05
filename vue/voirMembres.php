@@ -14,7 +14,7 @@
             echo "<a href='" . ROOT_URL . "controleur/modifierRole.php?idMembre=$login'>
                 <button class='m-4 !bg-white !text-red-500 hover:!text-orange-500'>Modifier Rôle</button>
                 </a>";
-            echo "<a href='" . ROOT_URL . "controleur/deleteThisUser.php?idMembre=$login'>
+            echo "<a href='" . ROOT_URL . "controleur/deleteThisUser.php?idMembre=$login?idGroupe=$idGroupe'>
                 <button class='m-4 !bg-white !text-red-500 hover:!text-orange-500'>Supprimer</button>
                 </a>";
             echo "</li>";
