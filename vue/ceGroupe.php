@@ -21,6 +21,26 @@ echo "<p class='justify-center flex-1 w-full h-full p-2 mx-5 text-center align-m
 echo "style='color:$color;background-color:$contrastColor;'>Votre role : $role</p>";
 echo "</div>";
 
+if ($isAdmin) {
+    echo "<div class='flex justify-center w-3/4 align-center my-3'>";
+
+    echo "<div class='flex-1 w-1/3 mx-5'>";
+    echo "<a class='w-full p-2 m-2' ";
+    echo "href='" . ROOT_URL . "controleur/createBudget.php?idGroupe=$idGroupe'>";
+    echo "<button class='w-full bg-red-500!'>Créer un budget</button></a></div>";
+
+    echo "<div class='flex-1 w-1/3 mx-5'>";
+    echo "<a class='w-full p-2 m-2' ";
+    echo "href='" . ROOT_URL . "controleur/createTheme.php?idGroupe=$idGroupe'>";
+    echo "<button class='w-full bg-red-500!'>Ajouter des thèmes</button></a></div>";
+
+    echo "<div class='flex-1 w-1/3 mx-5'>";
+    echo "<a class='w-full p-2 m-2' ";
+    echo "href='" . ROOT_URL . "controleur/inviterMembre.php?idGroupe=$idGroupe'>";
+    echo "<button class='w-full bg-red-500!'>Inviter des membres</button></a></div>";
+    echo "</div>";
+}
+
 echo "<div class='flex items-center justify-around w-full p-5 my-5'>";
 echo "<img src='$image' alt='groupe' class='object-contain mx-20 rounded-full w-30 h-30'>";
 echo "<p class='h-full p-5 mx-5 text-2xl font-bold text-left underline align-middle' style='color:$color;'>$nom</p>";
@@ -64,25 +84,5 @@ echo "<div class='flex justify-center w-full align-center'>";
 echo "<a class='p-2 m-2 w-100' ";
 echo "href='" . ROOT_URL . "controleur/createPropo.php?idGroupe=$idGroupe'>";
 echo "<button class='w-full'>Créer une proposition</button></a></div>";
-
-if ($isAdmin) {
-    echo "<div class='flex justify-center w-full align-center'>";
-
-    echo "<div class='flex-1 w-1/3 mx-5'>";
-    echo "<a class='w-full p-2 m-2' ";
-    echo "href='" . ROOT_URL . "controleur/createBudget.php?idGroupe=$idGroupe'>";
-    echo "<button class='w-full bg-red-500'>Créer un budget</button></a></div>";
-
-    echo "<div class='flex-1 w-1/3 mx-5'>";
-    echo "<a class='w-full p-2 m-2' ";
-    echo "href='" . ROOT_URL . "controleur/createTheme.php?idGroupe=$idGroupe'>";
-    echo "<button class='w-full bg-red-500'>Ajouter des thèmes</button></a></div>";
-
-    echo "<div class='flex-1 w-1/3 mx-5'>";
-    echo "<a class='w-full p-2 m-2' ";
-    echo "href='" . ROOT_URL . "controleur/inviterMembre.php?idGroupe=$idGroupe'>";
-    echo "<button class='w-full bg-red-500'>Inviter des membres</button></a></div>";
-    echo "</div>";
-}
 
 ?>
