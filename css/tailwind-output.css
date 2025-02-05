@@ -590,6 +590,9 @@
   .my-5 {
     margin-block: calc(var(--spacing) * 5);
   }
+  .my-5\! {
+    margin-block: calc(var(--spacing) * 5) !important;
+  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
@@ -673,6 +676,9 @@
   }
   .w-200 {
     width: calc(var(--spacing) * 200);
+  }
+  .w-200\! {
+    width: calc(var(--spacing) * 200) !important;
   }
   .w-full {
     width: 100%;

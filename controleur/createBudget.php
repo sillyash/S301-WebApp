@@ -3,9 +3,11 @@ require_once("../config/params.php");
 require_once(MODELE . "/Budget.php");
 require(VUE . "/debut.php");
 
+$idGroupe = $_GET["idGroupe"];
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $success = handleForm();
-    if ($success) require(VUE . "/ceGroupe.php");
+    if ($success) require(VUE . "/ceGroupe.php?idGroupe=$idGroupe");
 } else {
     require(VUE . "/createBudget.php");
 }
