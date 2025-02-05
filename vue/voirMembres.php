@@ -4,7 +4,8 @@
 
 <div>
     <ul class="w-full">
-        <?php 
+        <?php
+        $idGroupe = $GET_["idGroupe"];
         foreach ($membres as $membre): 
             $login = $membre['loginInter'];
             $role = $membre['role'];
@@ -20,7 +21,7 @@
         endforeach;
         ?>
     </ul>
-    <a href="<?php echo ROOT_URL . 'controleur/inviterMembre.php'; ?>">
+    <a href="<?php echo ROOT_URL . "controleur/inviterMembre.php?idGroupe=$idGroupe"; ?>">
         <button class="w-full">Inviter un nouveau membre</button>
     </a>
 </div>
