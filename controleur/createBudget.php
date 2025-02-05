@@ -7,7 +7,7 @@ $idGroupe = $_GET["idGroupe"];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $success = handleForm();
-    if ($success) require(CONTROLEUR . "/ceGroupe.php?idGroupe=$idGroupe");
+    if ($success) header("Location: ceGroupe.php?idGroupe=" . $_GET['idGroupe']);
 } else {
     require(VUE . "/createBudget.php");
 }
