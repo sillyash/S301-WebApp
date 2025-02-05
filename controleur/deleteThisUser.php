@@ -4,7 +4,7 @@ include(VUE . "/debut.php");
 
 try {
     $login = $_GET["idMembre"];
-    $role = $_GET["role"];
+    $role = $_GET["idRole"];
     $handle = curl_init();
     $url = API_URL . "Fait_partie_de?loginInter=$login";
     curl_setopt($handle, CURLOPT_URL, $url);
