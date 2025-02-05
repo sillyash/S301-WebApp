@@ -42,7 +42,7 @@ function handleForm() : bool {
     }
     try {
         $handle = curl_init();
-        curl_setopt($handle, CURLOPT_URL, API_URL . "Budget");
+        curl_setopt($handle, CURLOPT_URL, API_URL . "Proposition");
         curl_setopt($handle, CURLOPT_HTTPHEADER, ["Content-Type: application/json"]);
         curl_setopt($handle, CURLOPT_POST, 1);
         curl_setopt($handle, CURLOPT_POSTFIELDS, $postData);
