@@ -6,7 +6,7 @@ try {
     $login = $_GET["idMembre"];
     $role = $_GET["idRole"];
     $handle = curl_init();
-    $url = API_URL . "Fait_partie_de?loginInter=$login";
+    $url = API_URL . "Fait_partie_de?loginInter=$login?idRole=$idRole";
     curl_setopt($handle, CURLOPT_URL, $url);
     curl_setopt($handle, CURLOPT_CUSTOMREQUEST, "DELETE");
     curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
