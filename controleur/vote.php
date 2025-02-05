@@ -36,9 +36,8 @@ try {
         $httpCode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
         if ($httpCode > 299 || $httpCode < 200) {
             $response = json_decode($response, true);
-            $sqlError = isset($response["error"]) ? $response["error"] : $response;
+            $sqlError = $postData;
             echo "<div class='error'><p>Error: $sqlError</p></div>";
-            var_dump($postData);
             include(VUE . "/fin.php");
             exit();
         }
@@ -51,7 +50,6 @@ try {
     include(VUE . "/fin.php");
     exit();
 }
-var_dump($postData);
 include(VUE . "/cettePropo.php");
 require(VUE . "/fin.php");
 
