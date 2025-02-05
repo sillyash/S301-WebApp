@@ -7,7 +7,7 @@ function getContrastColor($hexcolor) {
     $yiq = (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
     return ($yiq >= 128) ? '#000000' : '#ffffff';
 }
-
+$idGroupe = $_GET["groupe"];
 $image = $groupe['imgGroupe'] ?? "https://picsum.photos/200/200";
 $desc = $groupe['descGroupe'];
 $nom = $groupe['nomGroupe'];
@@ -16,7 +16,7 @@ $contrastColor = getContrastColor($color);
 
 echo "<div class='flex items-center justify-center w-full p-2 mx-5 my-5 h-15'>";
 echo "<a class='justify-center flex-1 w-full h-full p-2 mx-5 text-center text-white align-middle bg-blue-500 rounded-md' ";
-echo "href='". ROOT_URL. "controleur/voirMembres.php'>Voir membres</a>";
+echo "href='". ROOT_URL. "controleur/voirMembres.php?idGroupe=$idGroupe'>Voir membres</a>";
 echo "<p class='justify-center flex-1 w-full h-full p-2 mx-5 text-center align-middle rounded-md' ";
 echo "style='color:$color;background-color:$contrastColor;'>Votre role : $role</p>";
 echo "</div>";
