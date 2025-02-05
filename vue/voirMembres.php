@@ -16,9 +16,6 @@
             echo "<a href='" . ROOT_URL . "controleur/deleteThisUser.php?idMembre=$idMembre'>
                 <button class='m-4 !bg-white !text-red-500 hover:!text-orange-500'>Supprimer</button>
                 </a>";
-
-            echo "href='".ROOT_URL."controleur/modifierRole.php?idMembre=$login'>";
-            echo "href='".ROOT_URL."controleur/deleteThisUser.php?idMembre=$login'>";
             echo "</li>";
         endforeach;
         ?>
