@@ -14,10 +14,15 @@ require(VUE . "/fin.php");
 
 function handleForm() : bool {
     try {
-        $idGroupe = isset($_GET["idGroupe"]); // idk wtf to do w this but it's gotta do smt
-        Budget::init();
-        $budget = new Budget($_POST, CONSTRUCT_POST);
-        $data_json = json_encode($budget);
+        $idGroupe = isset($_GET["idGroupe"]);
+        $titreBudget = isset($_POST["titreBudget"]) ? trim($_POST["titreBudget"]) : null;
+        $limiteBudgetGlobal = isset($_POST["limiteBudgetGlobal"]) ? $_POST["limiteBudgetGlobal"] : null;
+
+        $postData = json_encode([
+            "titreBudget" => $titreBudget,
+            "limiteBudgetGlobal" => $limiteBudgetGlobal,
+            "idGroupe" => $idGroupe
+        ]);
     } catch (Exception $e) {
         echo "Error: " . $e->getMessage();
         return false;
@@ -27,7 +32,7 @@ function handleForm() : bool {
         curl_setopt($handle, CURLOPT_URL, API_URL . "Budget");
         curl_setopt($handle, CURLOPT_HTTPHEADER, ["Content-Type: application/json"]);
         curl_setopt($handle, CURLOPT_POST, 1);
-        curl_setopt($handle, CURLOPT_POSTFIELDS, $data_json);
+        curl_setopt($handle, CURLOPT_POSTFIELDS, $postData);
         curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
         $response = curl_exec($handle);
 
