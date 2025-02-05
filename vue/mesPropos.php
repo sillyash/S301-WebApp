@@ -25,10 +25,5 @@
             </div>
         </li>
     </ul>
-    <a href= "<?php echo ROOT_URL.'controleur/createPropo.php'?>">
-        <button class="w-full" type="button">
-            Créer une proposition
-        </button>
-    </a>
 </div>
 
