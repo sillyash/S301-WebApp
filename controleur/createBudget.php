@@ -5,7 +5,7 @@ require(VUE . "/debut.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $success = handleForm();
-    if ($success) require(VUE . "/ceGroup.php");
+    if ($success) require(VUE . "/ceGroupe.php");
 } else {
     require(VUE . "/createGroup.php");
 }
