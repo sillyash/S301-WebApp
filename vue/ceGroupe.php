@@ -32,14 +32,14 @@ echo "<div class='flex flex-1'><div class='bg-blue-500 text-white rounded-md p-4
 echo "<p><strong>VOTES EN COURS</strong></p><hr><ul class='w-full'>";
 
 foreach ($scrutins as $scrutin) {
-    $idScrutin = $scrutin['idScrutin'];
+    $idProposition = $scrutin['idProposition'];
     $titre = $scrutin['titreProposition'];
     $nature = $scrutin['natureScrutin'];
     $pour = $scrutin['Pour'];
     $contre = $scrutin['Contre'];
 
     echo "<a class='!bg-white !text-red-500 hover:!text-orange-500 rounded-md'";
-    echo "href='".ROOT_URL."controleur/cettePropo.php?idScrutin=$idScrutin'>";
+    echo "href='".ROOT_URL."controleur/cettePropo.php?idProposition=$idProposition'>";
     echo "<li class='flex items-center justify-between w-full p-2 m-2'>$titre : $nature";
     echo "</a></li>";
 }
