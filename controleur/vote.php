@@ -48,6 +48,7 @@ try {
 } catch (Throwable $e) {
     echo "<div class='error'>";
     echo "<p>Error executing GET request : " . $e->getMessage() . "<p></div>";
+    var_dump($postData);
     include(VUE . "/fin.php");
     exit();
 }
