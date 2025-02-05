@@ -8,6 +8,9 @@ if (!isset($_GET['idGroupe'])) {
     exit();
 }
 
+$themes = apiGetThemesGroupe($_GET['idGroupe']);
+$budgets = apiGetBudgets($_GET['idGroupe']);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $success = handleForm();
     if ($success) header("Location: ceGroupe.php?groupe=" . $_GET['idGroupe']);
@@ -17,35 +20,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 require(VUE . "/fin.php");
 
-//$budgets = apiGetBudgets($idGroupe);
-
-require_once VUE . '/fin.php';
-
 /* --------------- Functions --------------- */
 function handleForm() : bool {
     try {
         $idGroupe = $_GET["idGroupe"];
-        $descProposition = isset($_POST["descProposition"]) ? trim($_POST["descProposition"]) : null;
-        $titreProposition  = isset($_POST["titreProposition"]) ? trim($_POST["titreProposition"]) : null;
-        $coutProp  = isset($_POST["coutProp"]) ? trim($_POST["coutProp"]) : null;
-        $dateProp  = date("Y-m-d H:i:s");
+        $_POST["idGroupe"] = $idGroupe;
+        $postData = json_encode(array("in" => $_POST));
 
-        $postData = json_encode([
-            "descProposition" => $descProposition,
-            "titreProposition" => $titreProposition,
-            "dateProp" => $dateProp,
-            "coutProp" => $coutProp,
-            "popularite" => 0,
-            "validee" => 1,
-            "idBudget" => 15 // en dur pour le moment, je fixerai si ca marche deja
-        ]);
-    } catch (Exception $e) {
-        echo "Error: " . $e->getMessage();
-        return false;
-    }
-    try {
         $handle = curl_init();
-        curl_setopt($handle, CURLOPT_URL, API_URL . "Proposition");
+        curl_setopt($handle, CURLOPT_URL, API_URL . "proc/CreerProposition");
         curl_setopt($handle, CURLOPT_HTTPHEADER, ["Content-Type: application/json"]);
         curl_setopt($handle, CURLOPT_POST, 1);
         curl_setopt($handle, CURLOPT_POSTFIELDS, $postData);
@@ -65,8 +48,10 @@ function handleForm() : bool {
             // Handle API errors
             $response = json_decode($response, true);
             $sqlError = isset($response["error"]) ? $response["error"] : $response;
+            $dataError = isset($response["data"]) ? $response["data"] : "";
 
-            echo "<div class='error'><p>Error: $sqlError</p></div>";
+            echo "<div class='error'><p>Error: " . var_export($sqlError) . "</p>";
+            echo "<p>Data : " . var_export($dataError, true) . "</p></div>";
             require(VUE . "/createPropo.php");
             return false;
         }
@@ -95,40 +80,39 @@ function apiGetBudgets($idGroupe) {
                 echo "<div class='error'><p>Error: $sqlError</p></div>";
             }
         }
+        $budgets = json_decode($response, true);
+        return $budgets;
     } catch (Throwable $e) {
         echo "<div class='error'>";
         echo "<p>Error executing GET request : " . $e->getMessage() . "<p></div>";
     }
-
-    $budgets = json_decode($response, true);
-    return $budgets;
 }
 
-function apiGetRolesGroupe(int $idGroupe) : array|false {
-    $handle = curl_init();
-    $url = API_URL . "table/Role";
-    curl_setopt($handle, CURLOPT_URL, $url);
-    curl_setopt($handle, CURLOPT_CUSTOMREQUEST, 'GET');
-    curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
+function apiGetThemesGroupe($idGroupe) {
     try {
+        $handle = curl_init();
+        $url = API_URL . "view/ThemesGroupe?idGroupe=" . $idGroupe;
+        curl_setopt($handle, CURLOPT_URL, $url);
+        curl_setopt($handle, CURLOPT_CUSTOMREQUEST, "GET");
+        curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
         $response = curl_exec($handle);
 
-        if (!$response) {
-            throw new Exception("Error executing GET request");
-            return false;
+        if (!$response) throw new Exception("Response is empty/false. URL = $url");
+        else {
+            $httpCode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
+            if ($httpCode > 299 || $httpCode < 200) {
+                $response = json_decode($response, true);
+                $sqlError = isset($response["error"]) ? $response["error"] : $response;
+                echo "<div class='error'><p>Error: $sqlError</p></div>";
+            }
         }
-
-        $httpCode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
-
-        if ($httpCode >= 200 && $httpCode < 300) {
-            return json_decode($response, true);
-        } else {
-            throw new Exception("Error: " . $response);
-            return false;
-        }
-    } catch (Exception $e) {
-        echo "<div class='error'><p>Error: " . $e->getMessage(). "</p></div>";
-        return false;
+        $themes = json_decode($response, true);
+        return $themes;
+    } catch (Throwable $e) {
+        echo "<div class='error'>";
+        echo "<p>Error executing GET request : " . $e->getMessage() . "<p></div>";
     }
 }
+
+
 ?>
