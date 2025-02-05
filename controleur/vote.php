@@ -2,14 +2,11 @@
 require_once("../config/params.php");
 include(VUE . "/debut.php");
 
-
-$idProposition = -1;
 try {
     if (!isset($_SESSION['login']) || empty($_SESSION['login'])) {
         throw new Exception("Session login is missing or empty.");
     }
     $login = $_SESSION["login"];
-    $idProposition = isset($_GET['idProposition']) ? (int)$_GET['idProposition'] : null;
     $valeurVote = isset($_GET['valeurVote']) ? (int)$_GET['valeurVote'] : null;
     $idScrutin = isset($_GET['idScrutin']) ? (int)$_GET['idScrutin'] : null;
     
@@ -25,7 +22,6 @@ try {
         "idScrutin" => $idScrutin,
         "valeurVote" => $valeurVote
     ]);
-    var_dump($postData);
     curl_setopt($handle, CURLOPT_URL, $url);
     curl_setopt($handle, CURLOPT_POST, true);
     curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
@@ -57,6 +53,5 @@ try {
 echo "<div class='success'><p>Vote registered successfully.</p>";
 
 include(VUE . "/fin.php");
-//header("Location: " . ROOT_URL . "/controleur/cettePropo.php?idProposition=$idProposition");
 
 ?>
