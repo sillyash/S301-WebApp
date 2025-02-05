@@ -1,5 +1,5 @@
 <div class="pageTitleBar">
-    CE GROUPE > Membres
+    Membres
 </div>
 
 <div>
