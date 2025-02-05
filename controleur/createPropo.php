@@ -35,7 +35,8 @@ function handleForm() : bool {
             "titreProposition" => $titreProposition,
             "dateProp" => $dateProp,
             "coutProp" => $coutProp,
-            "popularite" => 0
+            "popularite" => 0,
+            "validee" => 1
         ]);
     } catch (Exception $e) {
         echo "Error: " . $e->getMessage();
