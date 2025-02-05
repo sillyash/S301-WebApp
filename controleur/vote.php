@@ -2,13 +2,11 @@
 require_once("../config/params.php");
 require(VUE . "/debut.php");
 
-if (!isset($_SESSION["login"]) || empty($_SESSION["login"])) {
-    throw new Exception("Session login is missing or empty.");
-}
-$login = $_SESSION["login"];
-
-
 try {
+    if (!isset($_SESSION["login"]) || empty($_SESSION["login"])) {
+        throw new Exception("Session login is missing or empty.");
+    }
+    $login = $_SESSION["login"];
     $valeurVote = isset($_GET['valeurVote']) ? (int)$_GET['valeurVote'] : null;
     $idScrutin = isset($_GET['idScrutin']) ? (int)$_GET['idScrutin'] : null;
 
@@ -20,7 +18,6 @@ try {
     $url = API_URL . "Vote";
 
     $postData = json_encode([
-        "loginInter" => $login,
         "idScrutin" => $idScrutin,
         "valeurVote" => $valeurVote
     ]);
