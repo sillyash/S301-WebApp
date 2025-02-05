@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 require(VUE . "/fin.php");
 
-$budgets = apiGetBudgets($idGroupe);
+//$budgets = apiGetBudgets($idGroupe);
 
 require_once VUE . '/fin.php';
 
