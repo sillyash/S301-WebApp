@@ -26,14 +26,15 @@ function handleForm() : bool {
     try {
         $idGroupe = $_GET["idGroupe"];
         $descProposition = isset($_POST["descProposition"]) ? trim($_POST["descProposition"]) : null;
-        $titreProposition  = isset($_POST["titreProposition "]) ? trim($_POST["descProposition"]) : null;
+        $titreProposition  = isset($_POST["titreProposition"]) ? trim($_POST["titreProposition"]) : null;
+        $coutProp  = isset($_POST["coutProp"]) ? trim($_POST["coutProp"]) : null;
         $dateProp  = date("Y-m-d H:i:s");
 
         $postData = json_encode([
-            "titreBudget" => $titreBudget,
-            "limiteBudgetGlobal" => $limiteBudgetGlobal,
-            "titreProposition " => $titreProposition,
-
+            "descProposition" => $descProposition,
+            "titreProposition" => $titreProposition,
+            "dateProp " => $dateProp,
+            "coutProp " => $coutProp
         ]);
     } catch (Exception $e) {
         echo "Error: " . $e->getMessage();
