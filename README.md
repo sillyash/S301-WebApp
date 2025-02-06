@@ -2,12 +2,6 @@
 
 ## Modules
 
-### Mustache PHP
-
-[Docs](https://github.com/bobthecow/mustache.php)
-
-Already installed ([./vendor/mustache](./vendor/mustache/))
-
 ### Tailwind
 
 [Docs](https://tailwindcss.com/docs)
